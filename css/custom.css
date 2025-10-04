@@ -17,7 +17,8 @@
     background: linear-gradient(135deg, #fdfbf7 0%, #f5f1ea 100%);
     position: relative;
     overflow: hidden;
-    padding: 0px 30px !important;
+    padding: 0px 70px !important;
+
 }
 
 .hero-content {
@@ -37,6 +38,16 @@
     display: inline-block;
     margin-bottom: 30px;
     box-shadow: 0 2px 10px rgba(200, 152, 96, 0.2);
+}
+
+/* Lift the welcome badge slightly on large screens so it sits closer to the top-left of the hero content */
+@media (min-width: 992px) {
+    .welcome-badge {
+        margin-bottom: -62px;
+        position: relative;
+        top: -12px;
+        left: 0;
+    }
 }
 
 .hero-title {
@@ -95,6 +106,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 50px;
 }
 
 .plate-image {
@@ -104,7 +116,7 @@
     border-radius: 50%;
     object-fit: cover;
     z-index: 3;
-    left: 50%;
+    left: 45%;
     top: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -112,8 +124,8 @@
 
 .utensils-image {
     position: absolute;
-    width: 280px;
-    height: 600px;
+    width: 380px;
+    height: 720px;
     object-fit: cover;
     right: 0;
     top: 50%;
@@ -147,7 +159,7 @@
 .rotating-foods {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
@@ -171,6 +183,17 @@
     }
 }
 
+@keyframes pulseFoodItem {
+    0%, 100% {
+        width: 130px;
+        height: 130px;
+    }
+    50% {
+        width: 160px;
+        height: 160px;
+    }
+}
+
 .food-item {
     position: absolute;
     width: 130px;
@@ -179,7 +202,7 @@
     object-fit: cover;
     top: 50%;
     left: 50%;
-
+    animation: pulseFoodItem 4s ease-in-out infinite;
     transition: transform 0.3s ease;
 }
 
@@ -191,42 +214,52 @@
 /* Position each food item in a circle */
 .food-1 {
     transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+    animation-delay: 0s;
 }
 
 .food-2 {
     transform: translate(-50%, -50%) rotate(36deg) translateX(300px) rotate(-36deg);
+    animation-delay: 0.4s;
 }
 
 .food-3 {
     transform: translate(-50%, -50%) rotate(72deg) translateX(300px) rotate(-72deg);
+    animation-delay: 0.8s;
 }
 
 .food-4 {
     transform: translate(-50%, -50%) rotate(108deg) translateX(300px) rotate(-108deg);
+    animation-delay: 1.2s;
 }
 
 .food-5 {
     transform: translate(-50%, -50%) rotate(144deg) translateX(300px) rotate(-144deg);
+    animation-delay: 1.6s;
 }
 
 .food-6 {
     transform: translate(-50%, -50%) rotate(180deg) translateX(300px) rotate(-180deg);
+    animation-delay: 2s;
 }
 
 .food-7 {
     transform: translate(-50%, -50%) rotate(216deg) translateX(300px) rotate(-216deg);
+    animation-delay: 2.4s;
 }
 
 .food-8 {
     transform: translate(-50%, -50%) rotate(252deg) translateX(300px) rotate(-252deg);
+    animation-delay: 2.8s;
 }
 
 .food-9 {
     transform: translate(-50%, -50%) rotate(288deg) translateX(300px) rotate(-288deg);
+    animation-delay: 3.2s;
 }
 
 .food-10 {
     transform: translate(-50%, -50%) rotate(324deg) translateX(300px) rotate(-324deg);
+    animation-delay: 3.6s;
 }
 
 .sun-icon {
@@ -240,6 +273,32 @@
     z-index: 10;
 }
 
+/* Large screens */
+@media (min-width: 1400px) {
+    .utensils-image {
+        width: 420px;
+        height: 800px;
+    }
+    
+    .plate-image {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .rotating-foods {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+/* Medium-Large screens */
+@media (min-width: 992px) and (max-width: 1399px) {
+    .utensils-image {
+        width: 350px;
+        height: 680px;
+    }
+}
+
 @media (max-width: 991px) {
     .hero-title {
         font-size: 56px;
@@ -251,8 +310,8 @@
     }
 
     .utensils-image {
-        width: 220px;
-        height: 480px;
+        width: 280px;
+        height: 550px;
     }
     
     .rotating-foods {
@@ -276,6 +335,14 @@
     .food-8 { transform: translate(-50%, -50%) rotate(252deg) translateX(250px) rotate(-252deg); }
     .food-9 { transform: translate(-50%, -50%) rotate(288deg) translateX(250px) rotate(-288deg); }
     .food-10 { transform: translate(-50%, -50%) rotate(324deg) translateX(250px) rotate(-324deg); }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .utensils-image {
+        width: 240px;
+        height: 480px;
+    }
 }
 
 @media (max-width: 767px) {
