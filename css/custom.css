@@ -143,6 +143,92 @@
     height: auto;
 }
 
+/* Rotating Food Items */
+.rotating-foods {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.food-orbit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.food-item {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+
+    transition: transform 0.3s ease;
+}
+
+.food-item:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+/* Position each food item in a circle */
+.food-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+}
+
+.food-2 {
+    transform: translate(-50%, -50%) rotate(36deg) translateX(300px) rotate(-36deg);
+}
+
+.food-3 {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(300px) rotate(-72deg);
+}
+
+.food-4 {
+    transform: translate(-50%, -50%) rotate(108deg) translateX(300px) rotate(-108deg);
+}
+
+.food-5 {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(300px) rotate(-144deg);
+}
+
+.food-6 {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(300px) rotate(-180deg);
+}
+
+.food-7 {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(300px) rotate(-216deg);
+}
+
+.food-8 {
+    transform: translate(-50%, -50%) rotate(252deg) translateX(300px) rotate(-252deg);
+}
+
+.food-9 {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(300px) rotate(-288deg);
+}
+
+.food-10 {
+    transform: translate(-50%, -50%) rotate(324deg) translateX(300px) rotate(-324deg);
+}
+
 .sun-icon {
     position: absolute;
     bottom: 50px;
@@ -168,6 +254,28 @@
         width: 220px;
         height: 480px;
     }
+    
+    .rotating-foods {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .food-item {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Adjust orbit radius for medium screens */
+    .food-1 { transform: translate(-50%, -50%) rotate(0deg) translateX(250px) rotate(0deg); }
+    .food-2 { transform: translate(-50%, -50%) rotate(36deg) translateX(250px) rotate(-36deg); }
+    .food-3 { transform: translate(-50%, -50%) rotate(72deg) translateX(250px) rotate(-72deg); }
+    .food-4 { transform: translate(-50%, -50%) rotate(108deg) translateX(250px) rotate(-108deg); }
+    .food-5 { transform: translate(-50%, -50%) rotate(144deg) translateX(250px) rotate(-144deg); }
+    .food-6 { transform: translate(-50%, -50%) rotate(180deg) translateX(250px) rotate(-180deg); }
+    .food-7 { transform: translate(-50%, -50%) rotate(216deg) translateX(250px) rotate(-216deg); }
+    .food-8 { transform: translate(-50%, -50%) rotate(252deg) translateX(250px) rotate(-252deg); }
+    .food-9 { transform: translate(-50%, -50%) rotate(288deg) translateX(250px) rotate(-288deg); }
+    .food-10 { transform: translate(-50%, -50%) rotate(324deg) translateX(250px) rotate(-324deg); }
 }
 
 @media (max-width: 767px) {
