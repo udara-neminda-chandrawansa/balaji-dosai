@@ -1,3 +1,33 @@
+<!-- Start Slider Part 
+<section class="home-slider">
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+                <li data-transition="zoomout" data-slotamount="2" data-masterspeed="1000" data-thumb=""
+                    data-saveperformance="on" data-title="Slide">
+                    <img src="images/hero-bgs/1.jpg" alt="slidebg1"
+                        data-lazyload="images/hero-bgs/1.jpg" data-bgposition="center center"
+                        data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                </li>
+                <li data-transition="zoomout" data-slotamount="2" data-masterspeed="1000" data-thumb=""
+                    data-saveperformance="on" data-title="Slide">
+                    <img src="images/hero-bgs/2.jpg" alt="slidebg1"
+                        data-lazyload="images/hero-bgs/2.jpg" data-bgposition="center center"
+                        data-bgfit="cover" data-bgrepeat="no-repeat">
+                </li>
+                <li data-transition="zoomout" data-slotamount="2" data-masterspeed="1000" data-thumb=""
+                    data-saveperformance="on" data-title="Slide">
+                    <img src="images/hero-bgs/3.jpg" alt="slidebg1"
+                        data-lazyload="images/hero-bgs/3.jpg" data-bgposition="center center"
+                        data-bgfit="cover" data-bgrepeat="no-repeat">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+- End Slider Part -->
+
 <!-- Start Food Hours -->
 <section class="food-hours banner-bg home-icon wow fadeInDown" data-background="images/banner2.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
     <div class="icon-default icon-gold">
