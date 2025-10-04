@@ -1361,9 +1361,9 @@
     top: 33%;
   }
   .logo>a>img{
-    height: 100px !important;
+    height: 80px !important;
     display: flex;
     object-fit: contain;
-    width: 200px;
+    width: 80px;
   }
 }
