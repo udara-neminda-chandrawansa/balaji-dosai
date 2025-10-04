@@ -1,4 +1,4 @@
-:root{
+:root {
     --nav-height: 0px;
 }
 
@@ -158,12 +158,12 @@
     .hero-title {
         font-size: 56px;
     }
-    
+
     .plate-image {
         width: 350px;
         height: 350px;
     }
-    
+
     .utensils-image {
         width: 220px;
         height: 480px;
@@ -174,17 +174,17 @@
     .hero-title {
         font-size: 42px;
     }
-    
+
     .image-container {
         height: 50vh;
         margin-top: 40px;
     }
-    
+
     .plate-image {
         width: 280px;
         height: 280px;
     }
-    
+
     .utensils-image {
         width: 180px;
         height: 380px;
@@ -197,17 +197,17 @@
     .hero-title {
         font-size: 42px;
     }
-    
+
     .image-container {
         height: 50vh;
         margin-top: 40px;
     }
-    
+
     .plate-image {
         width: 280px;
         height: 280px;
     }
-    
+
     .utensils-image {
         width: 180px;
         height: 380px;
@@ -215,12 +215,12 @@
 }
 
 .bd-footer {
-    background: linear-gradient(135deg,  #1e6621 100%);
+    background: linear-gradient(135deg, #1e6621 100%);
     color: #ffffff;
-    padding: 60px 0 0;
+    padding: 60px 0 0 0;
     position: relative;
     z-index: auto;
-    margin-top: 0;
+    margin-top: -1970px;
     clear: both;
 }
 
@@ -359,12 +359,274 @@
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* Signature dishes gallery */
+.signature-dishes {
+    padding: 60px 0;
+    background: transparent;
+}
+
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px;
+    align-items: start;
+    margin-top: 30px;
+
+}
+
+.sig-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sig-item img {
+    display: block;
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
+.sig-caption {
+    margin-top: 18px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #222;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .signature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .sig-item img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 767px) {
+    .signature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .sig-item img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* When Slick initializes it will add inline display rules; provide fallback styles */
+.signature-grid.slick-initialized {
+    display: block;
+    /* Slick manages the layout */
+}
+
+.signature-grid .sig-item {
+    margin: 0 10px;
+}
+
+.signature-grid .sig-item img {
+    width: 160px;
+    height: 160px;
+    max-width: 100%;
+    border-radius: 999px;
+
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .signature-grid.slick-initialized .sig-item img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Slick navigation arrows - ENABLED and CENTERED */
+.signature-dishes .slick-prev,
+.signature-dishes .slick-next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 100 !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.signature-dishes .slick-prev {
+    left: -60px !important;
+}
+
+.signature-dishes .slick-next {
+    right: -60px !important;
+}
+
+.signature-dishes .slick-prev:before,
+.signature-dishes .slick-next:before {
+    font-size: 40px !important;
+    opacity: 0.75 !important;
+}
+
+.signature-dishes .slick-prev:hover:before,
+.signature-dishes .slick-next:hover:before {
+    opacity: 1 !important;
+}
+
+/* 
+.signature-dishes .signature-grid.slick-initialized .slick-arrow {
+    display: none !important;
+}
+*/
+
+/* Extra safety: hide any slick arrow selectors and their pseudo-elements inside signature-dishes */
+/* COMMENTED OUT TO SHOW ARROWS
+.signature-dishes .slick-arrow,
+.signature-dishes .slick-prev,
+.signature-dishes .slick-next,
+.signature-dishes .slick-prev:before,
+.signature-dishes .slick-next:before {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+*/
+
+/* Left/right invisible tap zones for manual navigation */
+.signature-dishes {
+    position: relative;
+}
+
+.sig-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18%;
+    /* large tap area */
+    z-index: 30;
+}
+
+.sig-nav-left {
+    left: 0;
+}
+
+.sig-nav-right {
+    right: 0;
+}
+
+.sig-nav {
+    background: transparent;
+}
+
+.sig-nav:active {
+    /* small feedback on touch */
+    opacity: 0.9;
+}
+
+/* Visible navigation arrows */
+.signature-dishes .container {
+    position: relative;
+}
+
+.sig-arrow-container {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.sig-arrow {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #c89860;
+    color: #c89860;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    pointer-events: auto;
+}
+
+.sig-arrow:hover {
+    background: #c89860;
+    color: white;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 25px rgba(200, 152, 96, 0.5);
+}
+
+.sig-arrow-left {
+    left: -80px;
+}
+
+.sig-arrow-right {
+    right: -80px;
+}
+
+@media (max-width: 1400px) {
+    .sig-arrow-left {
+        left: -60px;
+    }
+
+    .sig-arrow-right {
+        right: -60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sig-arrow {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .sig-arrow-left {
+        left: 10px;
+    }
+
+    .sig-arrow-right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sig-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .sig-arrow-left {
+        left: 5px;
+    }
+
+    .sig-arrow-right {
+        right: 5px;
+    }
+}
+
 @media (max-width: 991px) {
     .bd-footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
-    
+
     .bd-brand-section {
         grid-column: 1 / -1;
         max-width: 100%;
@@ -375,62 +637,62 @@
     .bd-footer {
         padding: 40px 0 0;
     }
-    
+
     .bd-footer-content {
         grid-template-columns: 1fr;
         gap: 35px;
     }
-    
+
     .bd-footer-bottom {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-    
+
     .bd-policies {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .bd-separator {
-    display: none;
+        display: none;
     }
-    }
-    
-    /* Why People Love Us Section */
-    .why-people-love-us {
+}
+
+/* Why People Love Us Section */
+.why-people-love-us {
     padding: 40px 0 0 0;
     background: linear-gradient(135deg, #fdfbf7 0%, #f5f1ea 100%);
     position: relative;
     overflow: hidden;
-    }
-    
-    .wplu-image-grid {
+}
+
+.wplu-image-grid {
     position: relative;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    }
-    
-    .wplu-coffee-img {
+}
+
+.wplu-coffee-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 200px;
     height: 200px;
     z-index: 3;
-    }
-    
-    .wplu-coffee-img img {
+}
+
+.wplu-coffee-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .wplu-main-plate {
+}
+
+.wplu-main-plate {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -438,61 +700,61 @@
     width: 480px;
     height: 480px;
     z-index: 2;
-    }
-    
-    .wplu-main-plate img {
+}
+
+.wplu-main-plate img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
-    }
-    
-    .wplu-dosa-img {
+}
+
+.wplu-dosa-img {
     position: absolute;
     bottom: 20px;
     right: 0;
     width: 220px;
     height: 220px;
     z-index: 3;
-    }
-    
-    .wplu-dosa-img img {
+}
+
+.wplu-dosa-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .wplu-pattern-circle {
+}
+
+.wplu-pattern-circle {
     position: absolute;
     z-index: 1;
     display: block;
-    }
+}
 
-    /* Left decorative SVG (large, top-left) */
-    .wplu-circle-1 {
+/* Left decorative SVG (large, top-left) */
+.wplu-circle-1 {
     width: 200px;
     height: auto;
     top: -4%;
     left: -20%;
     transform: rotate(0deg);
-    }
+}
 
-    /* Bottom-left decorative SVG (smaller) */
-    .wplu-circle-2 {
+/* Bottom-left decorative SVG (smaller) */
+.wplu-circle-2 {
     width: 220px;
     height: auto;
     bottom: 6%;
     left: -35%;
     opacity: 0.85;
-    }
-    
-    .wplu-content {
+}
+
+.wplu-content {
     padding-left: 40px;
-    }
-    
-    .wplu-badge {
+}
+
+.wplu-badge {
     display: inline-block;
     background: transparent;
     color: #4CAF50;
@@ -501,7 +763,7 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 20px;
-    }
+}
 
 /* About section decorative SVG */
 .about-pattern {
@@ -520,9 +782,17 @@
 
 /* gentle floating animation */
 @keyframes float-up-down {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(199px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(199px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .about-circle-1 {
@@ -530,36 +800,40 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .about-circle-1 { animation: none; }
+    .about-circle-1 {
+        animation: none;
+    }
 }
 
 @media (max-width: 991px) {
-    .about-pattern { display: none; }
+    .about-pattern {
+        display: none;
+    }
 }
-    
-    .wplu-title {
+
+.wplu-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.2;
     color: #000;
     margin-bottom: 25px;
-    }
-    
-    .wplu-description {
+}
+
+.wplu-description {
     font-size: 16px;
     color: #666;
     line-height: 1.8;
     margin-bottom: 35px;
-    }
-    
-    .wplu-features {
+}
+
+.wplu-features {
     list-style: none;
     padding: 0;
     margin: 0;
-    }
-    
-    .wplu-features li {
+}
+
+.wplu-features li {
     display: flex;
     align-items: flex-start;
     gap: 15px;
@@ -567,78 +841,137 @@
     font-size: 16px;
     color: #333;
     line-height: 1.6;
-    }
-    
-    .wplu-icon {
+}
+
+.wplu-icon {
     width: 30px;
     height: auto;
     flex-shrink: 0;
     margin-top: -2px;
-    }
-    
-    @media (max-width: 991px) {
+}
+
+@media (max-width: 991px) {
     .why-people-love-us {
-    padding: 60px 0;
+        padding: 60px 0;
     }
-    
+
     .wplu-image-grid {
-    height: 500px;
-    margin-bottom: 40px;
+        height: 500px;
+        margin-bottom: 40px;
     }
-    
+
     .wplu-coffee-img {
-    width: 160px;
-    height: 160px;
+        width: 160px;
+        height: 160px;
     }
-    
+
     .wplu-main-plate {
-    width: 300px;
-    height: 300px;
+        width: 300px;
+        height: 300px;
     }
-    
+
     .wplu-dosa-img {
-    width: 180px;
-    height: 180px;
+        width: 180px;
+        height: 180px;
     }
-    
+
     .wplu-content {
-    padding-left: 0;
+        padding-left: 0;
     }
-    
+
     .wplu-title {
-    font-size: 36px;
+        font-size: 36px;
     }
-    }
-    
-    @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
     .wplu-image-grid {
-    height: 400px;
+        height: 400px;
     }
-    
+
     .wplu-coffee-img {
-    width: 120px;
-    height: 120px;
+        width: 120px;
+        height: 120px;
     }
-    
+
     .wplu-main-plate {
-    width: 240px;
-    height: 240px;
+        width: 240px;
+        height: 240px;
     }
-    
+
     .wplu-dosa-img {
-    width: 140px;
-    height: 140px;
+        width: 140px;
+        height: 140px;
     }
-    
+
     .wplu-title {
-    font-size: 28px;
+        font-size: 28px;
     }
-    
+
     .wplu-description {
-    font-size: 14px;
+        font-size: 14px;
     }
-    
+
     .wplu-features li {
-    font-size: 14px;
+        font-size: 14px;
     }
+}
+
+/* Gallery Navigation Arrows */
+.gallery-navigation {
+    position: relative;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+
+.gallery-arrow {
+    background: linear-gradient(135deg, #c89860 0%, #b8885a 100%);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    box-shadow: 0 2px 10px rgba(200, 152, 96, 0.3);
+}
+
+.gallery-arrow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(200, 152, 96, 0.5);
+}
+
+.gallery-arrow svg {
+    color: white;
+}
+
+.signature-grid {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.signature-grid::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .gallery-navigation {
+        margin-top: -40px;
     }
+
+    .gallery-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-arrow svg {
+        width: 30px;
+        height: 30px;
+    }
+}

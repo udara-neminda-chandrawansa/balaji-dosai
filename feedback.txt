@@ -1,0 +1,46 @@
+                <!-- Start Client Say -->
+                <section class="client banner-bg invert invert-black home-icon wow fadeInDown"
+                    data-background="images/banner3.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="icon-default">
+                        <img src="images/icon21.png" alt="Testimonials Icon" class="icon-black-new">
+                    </div>
+                    <div class="container">
+                        <div class="build-title">
+                            <h2>What Our Students Say</h2>
+                            <h6>500+ Happy Travelers Learned with Us</h6>
+                        </div>
+                        <div class="client-say">
+                            <div class="owl-carousel owl-theme" data-items="1" data-laptop="1" data-tablet="1"
+                                data-mobile="1" data-nav="false" data-dots="true" data-autoplay="true" data-speed="1800"
+                                data-autotime="5000">
+                                <!-- Testimonial 1 -->
+                                <div class="item">
+                                    <p><img src="images/client1.png" alt="Sarah from Australia"></p>
+                                    <h5>Sarah K.</h5>
+                                    <p>Traveler from Australia</p>
+                                    <p>"The hopper-making class was the highlight of my Sri Lanka trip! The chef
+                                        patiently guided us through each step, and the flavors were unforgettable. I’ve
+                                        already recreated the recipes at home!"</p>
+                                </div>
+                                <!-- Testimonial 2 -->
+                                <div class="item">
+                                    <p><img src="images/client2.png" alt="Mark from Germany"></p>
+                                    <h5>Mark T.</h5>
+                                    <p>Traveler from Germany</p>
+                                    <p>"As a solo traveler, this class was perfect. I met other food lovers, learned to
+                                        cook fiery curries, and left with a full belly. The market tour added so much
+                                        context to Sri Lankan spices!"</p>
+                                </div>
+                                <!-- Testimonial 3 -->
+                                <div class="item">
+                                    <p><img src="images/client3.png" alt="Family from Japan"></p>
+                                    <h5>The Tanaka Family</h5>
+                                    <p>Travelers from Japan</p>
+                                    <p>"Our kids adored rolling kottu roti with the chef. The team made it so fun and
+                                        interactive—now we bond over Sri Lankan dinners back in Tokyo!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Client Say -->
