@@ -399,7 +399,7 @@
     
     /* Why People Love Us Section */
     .why-people-love-us {
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     background: linear-gradient(135deg, #fdfbf7 0%, #f5f1ea 100%);
     position: relative;
     overflow: hidden;
@@ -435,8 +435,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 380px;
-    height: 380px;
+    width: 480px;
+    height: 480px;
     z-index: 2;
     }
     
@@ -445,7 +445,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     }
     
     .wplu-dosa-img {
@@ -467,26 +466,26 @@
     
     .wplu-pattern-circle {
     position: absolute;
-    border-radius: 50%;
     z-index: 1;
+    display: block;
     }
-    
+
+    /* Left decorative SVG (large, top-left) */
     .wplu-circle-1 {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, rgba(200, 152, 96, 0.1) 0%, rgba(200, 152, 96, 0.05) 100%);
-    top: 10%;
-    right: 10%;
-    border: 2px solid rgba(200, 152, 96, 0.2);
+    width: 200px;
+    height: auto;
+    top: -4%;
+    left: -20%;
+    transform: rotate(0deg);
     }
-    
+
+    /* Bottom-left decorative SVG (smaller) */
     .wplu-circle-2 {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, rgba(200, 152, 96, 0.1) 0%, rgba(200, 152, 96, 0.05) 100%);
-    bottom: 15%;
-    left: 5%;
-    border: 2px solid rgba(200, 152, 96, 0.2);
+    width: 220px;
+    height: auto;
+    bottom: 6%;
+    left: -35%;
+    opacity: 0.85;
     }
     
     .wplu-content {
