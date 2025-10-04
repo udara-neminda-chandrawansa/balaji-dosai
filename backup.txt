@@ -1,0 +1,320 @@
+<!-- Start Food Hours -->
+<section class="food-hours banner-bg home-icon wow fadeInDown" data-background="images/banner2.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="icon-default icon-gold">
+        <img src="images/icon19.png" alt="">
+    </div>
+    <div class="container">
+        <div class="food-blog">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                    <div class="food-blog-inner">
+                        <div class="food-item">
+                            <div class="food-item-inner">
+                                <img src="images/icon15.png" alt="">
+                            </div>
+                        </div>
+                        <h2>Breakfast</h2>
+                        <span>8.00 am 10.00 am</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                    <div class="food-blog-inner">
+                        <div class="food-item">
+                            <div class="food-item-inner">
+                                <img src="images/icon16.png" alt="">
+                            </div>
+                        </div>
+                        <h2>Lunch</h2>
+                        <span>1.00 am 2.00 am</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                    <div class="food-blog-inner">
+                        <div class="food-item">
+                            <div class="food-item-inner">
+                                <img src="images/icon17.png" alt="">
+                            </div>
+                        </div>
+                        <h2>Dinner</h2>
+                        <span>7.00 am 9.00 am</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                    <div class="food-blog-inner">
+                        <div class="food-item">
+                            <div class="food-item-inner">
+                                <img src="images/icon18.png" alt="">
+                            </div>
+                        </div>
+                        <h2>Dessert</h2>
+                        <span>All Day</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Food Hours -->
+<!-- Start Chef -->
+<section class="chef-part home-icon home-small-pad wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="icon-default">
+        <img src="images/icon11.png" alt="">
+    </div>
+    <div class="container">
+        <div class="build-title">
+            <h2>Our Awesome Chef</h2>
+            <h6>Meet Professional Cook Team</h6>
+        </div>
+        <div class="owl-carousel owl-theme chef-slider" data-items="4" data-laptop="3" data-tablet="2" data-mobile="1" data-nav="true" data-dots="false" data-autoplay="true" data-speed="1800" data-autotime="5000">
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef1.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Anna Taylor</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef2.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Alex Wilson</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef3.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Anita Golden</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef4.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Benderd Dimitor</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef1.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Anna Taylor</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef2.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Alex Wilson</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef3.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Anita Golden</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="chef-blog">
+                    <div class="chef-inner">
+                        <div class="chef-member">
+                            <img src="images/chef4.png" alt="">
+                        </div>
+                        <div class="chef-info">
+                            <h5>Benderd Dimitor</h5>
+                            <span>Head Chief</span>
+                            <div class="social-top">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Chef -->
+<!--partner (logo slider)-->
+<section class="partner-part text-center pad-top-remove wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="container">
+        <div class="owl-carousel owl-theme" data-items="5" data-laptop="4" data-tablet="3" data-mobile="1" data-nav="false" data-dots="false" data-autoplay="true" data-speed="1400" data-autotime="3000">
+            <div class="item">
+                <img src="images/partner1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner5.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner1.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner2.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner3.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner4.png" alt="">
+            </div>
+            <div class="item">
+                <img src="images/partner5.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--from home slider-->
+<!-- LAYERS 
+<div class="tp-caption large_text" data-x="center" data-hoffset="0" data-y="250"
+    data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+    data-speed="1000" data-start="500" data-easing="Back.easeInOut"
+    data-endspeed="300">WE’RE <span>KANDYAN HUT COOKING CLASS</span>
+
+</div>
+-->
+<!-- LAYERS 
+<div class="tp-caption medium_text" data-x="center" data-hoffset="0" data-y="340"
+    data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+    data-speed="1000" data-start="500" data-easing="Back.easeInOut"
+    data-endspeed="300">Traditional Sri Lankan Delicacies
+</div>
+-->
+<!-- LAYERS 
+<div class="tp-caption" data-x="center" data-hoffset="0" data-y="425"
+    data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+    data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+    data-speed="1000" data-start="500" data-easing="Back.easeInOut"
+    data-endspeed="300"><a href="#" class="button-white">Explore NOW</a>
+</div>
+-->
