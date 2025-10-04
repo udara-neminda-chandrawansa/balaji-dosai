@@ -502,6 +502,40 @@
     font-weight: 700;
     margin-bottom: 20px;
     }
+
+/* About section decorative SVG */
+.about-pattern {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.about-circle-1 {
+    width: 260px;
+    height: auto;
+    left: -2%;
+    top: 4%;
+    opacity: 0.95;
+}
+
+/* gentle floating animation */
+@keyframes float-up-down {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(199px); }
+    100% { transform: translateY(0); }
+}
+
+.about-circle-1 {
+    animation: float-up-down 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-circle-1 { animation: none; }
+}
+
+@media (max-width: 991px) {
+    .about-pattern { display: none; }
+}
     
     .wplu-title {
     font-family: 'Poppins', sans-serif;
