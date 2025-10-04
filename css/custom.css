@@ -366,6 +366,59 @@
     }
 }
 
+/* Mobile-specific hero layout tweaks */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 20px 18px !important;
+    }
+
+    .hero-content {
+        padding: 36px 0;
+    }
+
+    /* Make badge sit nicely above the title and centered in the content column */
+    .welcome-badge {
+        display: inline-block;
+        margin: 0 auto 18px auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(200,152,96,0.12);
+    }
+
+    .hero-title {
+        font-size: 42px;
+        line-height: 1.05;
+        margin-bottom: 18px;
+        text-align: left;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-bottom: 28px;
+        padding-right: 0;
+    }
+
+    .btn-menu, .btn-contact {
+        display: block;
+        width: 220px;
+        max-width: 100%;
+        margin: 0 0 12px 0;
+        padding: 12px 20px;
+    }
+
+    /* Stack hero content vertically by hiding or reducing heavy decorative images on mobile */
+    .image-container {
+        display: none;
+    }
+
+    /* Reduce rotating foods / decorations on smaller screens */
+    .rotating-foods, .branch-decoration, .wplu-pattern-circle, .about-pattern {
+        display: none !important;
+    }
+}
+
 
 /* Footer Styles */
 @media (max-width: 767px) {
