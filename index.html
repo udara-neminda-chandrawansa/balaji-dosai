@@ -795,8 +795,11 @@
 
 
                 <!-- A Journey of Flavour. -->
-                <section class="client banner-bg invert invert-black home-icon wow fadeInDown signature-dishes"
+                <section class="client banner-bg invert invert-black home-icon wow fadeInDown signature-dishes journey-section"
                     data-background="images/banner3.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <!-- Decorative SVG at top -->
+                    <img src="images/index/banner-6_vector-3.svg" alt="decorative" class="journey-decorative-svg">
+                    
                     <div class="icon-default">
                         <img src="images/icon16.png" alt="Icon" class="icon-black-new">
                     </div>
@@ -804,16 +807,15 @@
                         <div class="row align-items-center">
                             <!-- Left Column: Text Content -->
                             <div class="col-lg-6">
-                                <div style="padding-right: 40px;">
-                                    <p style="color: #6c757d; font-size: 16px; margin-bottom: 15px; font-weight: 500;">A
-                                        Journey of Flavour.</p>
+                                <div class="journey-content-wrapper">
+                                    <p class="journey-subtitle">A Journey of Flavour.</p>
 
-                                    <h1 style="font-size: 48px; line-height: 1.3; margin-bottom: 25px; color: #2d3436;">
-                                        Where Every Dish Begins With <span style="color: #128a29;">Heart</span> and Ends
-                                        With a <span style="color: #128a29;">Smile.</span>
+                                    <h1 class="journey-title">
+                                        Where Every Dish Begins With <span class="journey-title-highlight">Heart</span> and Ends
+                                        With a <span class="journey-title-highlight">Smile.</span>
                                     </h1>
 
-                                    <p style="color: #6c757d; font-size: 18px; line-height: 1.8; margin-bottom: 0;">
+                                    <p class="journey-description">
                                         Experience the magic that unfolds in our kitchens from the careful preparation
                                         of each ingredient to the joy of serving authentic South Indian meals. These
                                         glimpses reflect the tradition, care, and pride we put into every plate.
@@ -823,44 +825,34 @@
 
                             <!-- Right Column: Images/Videos Grid -->
                             <div class="col-lg-6">
-                                <div style="position: relative;">
+                                <div class="journey-image-wrapper">
                                     <!-- "Since 1981" Badge -->
-                                    <div style="position: absolute; top: -20px; right: 0; z-index: 10;">
-                                        <div
-                                            style="background: linear-gradient(135deg, #c5e17a 0%, #a8d63f 100%); padding: 15px 25px; border-radius: 50px; box-shadow: 0 4px 15px rgba(130, 196, 60, 0.3); transform: rotate(5deg);">
-                                            <p
-                                                style="margin: 0; color: #2d3436; font-weight: bold; font-size: 14px; text-align: center;">
-                                                since</p>
-                                            <h2
-                                                style="margin: 0; color: #2d3436; font-weight: bold; font-size: 42px; line-height: 1;">
-                                                1981</h2>
+                                    <div class="journey-badge">
+                                        <div class="journey-badge-inner">
+                                            <p class="journey-badge-text">since</p>
+                                            <h2 class="journey-badge-year">1981</h2>
                                         </div>
                                     </div>
 
                                     <!-- Images Grid -->
-                                    <div
-                                        style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 40px;">
+                                    <div class="journey-grid">
                                         <!-- Top Left - Vegetable Image -->
-                                        <div style="grid-column: 1; grid-row: 1;">
-                                            <video autoplay loop muted playsinline
-                                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                                        <div class="journey-grid-item-1">
+                                            <video autoplay loop muted playsinline class="journey-video-small">
                                                 <source src="images/index/1.mp4" type="video/mp4">
                                             </video>
                                         </div>
 
                                         <!-- Center Large - Cashew Image -->
-                                        <div
-                                            style="grid-column: 2; grid-row: 1 / 3; display: flex; align-items: center;">
-                                            <video autoplay loop muted playsinline
-                                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #f0f8e8;">
+                                        <div class="journey-grid-item-2">
+                                            <video autoplay loop muted playsinline class="journey-video-large">
                                                 <source src="images/index/2.mp4" type="video/mp4">
                                             </video>
                                         </div>
 
                                         <!-- Bottom Left - Cooking Image -->
-                                        <div style="grid-column: 1; grid-row: 2;">
-                                            <video autoplay loop muted playsinline
-                                                style="width: 100%; height: 200px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                                        <div class="journey-grid-item-3">
+                                            <video autoplay loop muted playsinline class="journey-video-small">
                                                 <source src="images/index/3.mp4" type="video/mp4">
                                             </video>
                                         </div>
