@@ -1,15 +1,19 @@
+:root{
+    --nav-height: 0px;
+}
+
 .d-none {
     display: none !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .d-lg-block {
         display: inline-block !important;
     }
 }
 
 .hero-section {
-    min-height: 100vh;
+    min-height: calc(100dvh - var(--nav-height));
     background: linear-gradient(135deg, #fdfbf7 0%, #f5f1ea 100%);
     position: relative;
     overflow: hidden;
@@ -87,7 +91,7 @@
 
 .image-container {
     position: relative;
-    height: 100vh;
+    height: calc(100dvh - var(--nav-height));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +131,7 @@
 
 .branch-1 {
     top: 15%;
-    right: 25%;
+    right: 60%;
     width: 150px;
     height: auto;
 }
