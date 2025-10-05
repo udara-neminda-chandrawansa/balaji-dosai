@@ -1773,7 +1773,8 @@ textarea {
 }
 
 .top-cell {
-  font-size: 18px;
+  font-family: "Futura", serif !important;
+  font-size: 16px;
 }
 
 .top-cell span {
@@ -1782,7 +1783,8 @@ textarea {
 }
 
 .top-email {
-  font-size: 14px;
+  font-family: "Futura", serif !important;
+  font-size: 16px;
 }
 
 .header-top-right {
@@ -7554,4 +7556,8 @@ body main .team-page {
 
 .list-style-none li{
   list-style: none !important;
+}
+
+.font-futura{
+  font-family: "Futura", sans-serif;
 }
