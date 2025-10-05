@@ -1740,7 +1740,7 @@ textarea {
   width: 100%;
   position: relative;
   background: var(--my-basic-color);
-  padding: 15px 0;
+  padding: 10px 0;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
@@ -7560,4 +7560,8 @@ body main .team-page {
 
 .font-futura{
   font-family: "Futura", sans-serif;
+}
+
+.font-cinzel{
+  font-family: "Cinzel", sans-serif;
 }
