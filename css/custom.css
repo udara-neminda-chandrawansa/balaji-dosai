@@ -1634,3 +1634,55 @@ textarea.form-control {
         box-shadow: none;
     }
 }
+
+/* Mobile override: make the Why People Love Us main plate image fluid and remove overlapping decorations */
+@media (max-width: 991px) {
+    .wplu-image-grid {
+        height: auto !important;
+        display: block;
+        padding: 10px 16px;
+    }
+
+    .wplu-main-plate {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 520px; /* sensible cap on larger small screens */
+        margin: 0 auto 18px auto !important;
+        z-index: 2;
+    }
+
+    .wplu-main-plate img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+        border-radius: 12px !important;
+        display: block !important;
+    }
+
+    /* Hide decorative SVGs that overlap the image on small screens */
+    .wplu-pattern-circle,
+    .wplu-coffee-img,
+    .wplu-dosa-img {
+        display: none !important;
+    }
+
+    .wplu-content {
+        padding-left: 0 !important;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wplu-main-plate {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .wplu-main-plate img {
+        border-radius: 8px !important;
+    }
+}
