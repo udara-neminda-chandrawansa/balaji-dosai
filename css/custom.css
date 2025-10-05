@@ -178,6 +178,12 @@
     pointer-events: none;
 }
 
+@media (max-width: 1200px) {
+    .rotating-foods, .plate-image {
+    left: 50%;
+}
+}
+
 .food-orbit {
     position: relative;
     width: 100%;
@@ -420,13 +426,13 @@
     }
 
     /* Stack hero content vertically by hiding or reducing heavy decorative images on mobile */
-    .image-container {
+    .image-container .utensils-image, .image-container .branch-decoration{
         display: none;
     }
 
     /* Reduce rotating foods / decorations on smaller screens */
     .rotating-foods, .branch-decoration, .wplu-pattern-circle, .about-pattern {
-        display: none !important;
+        /* display: none !important; */
     }
 }
 
