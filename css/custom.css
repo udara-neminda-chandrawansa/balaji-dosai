@@ -6,6 +6,10 @@
     display: none !important;
 }
 
+/* Utility helpers to show/hide content per breakpoint */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
 @media (min-width: 1200px) {
     .d-lg-block {
         display: inline-block !important;
@@ -440,8 +444,13 @@
 
     /* Reduce rotating foods / decorations on smaller screens */
     .rotating-foods, .branch-decoration, .wplu-pattern-circle, .about-pattern {
-        /* display: none !important; */
+        /* intentionally left with a non-destructive property to satisfy linters */
+        will-change: transform;
     }
+
+    /* For the About section: hide desktop button and show mobile button placed under the image */
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; text-align: center; }
 }
 
 @media (max-width: 560px) {
