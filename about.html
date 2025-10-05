@@ -55,6 +55,77 @@
             margin-bottom: 10px;
             padding: 0px 5px;
         }
+        /* Make images full-width on small screens (mobile) */
+        @media (max-width: 768px) {
+            /* Generic images inside main content should not exceed container */
+            .main-part img, .welcome-part img, .container img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+                display: block;
+            }
+
+            /* Ensure fixed-size thumbnails in story block become responsive */
+            .welcome-part .container .row .col-lg-6 img,
+            .welcome-part .container .row .col-lg-6 .my-img-pt {
+                width: 100% !important;
+                height: auto !important;
+                object-fit: cover;
+            }
+
+            /* Make the green logo and small icons keep their natural size.
+               Keep footer logo larger (restore previous look) */
+            .logo img {
+                width: auto !important;
+                max-width: 140px !important;
+                height: auto !important;
+            }
+            /* Footer logo: allow a larger max width and center it on mobile */
+            .footer-part .icon-default img, .footer-part .icon-default.icon-dark img, .icon-default.icon-dark img {
+                width: auto !important;
+                max-width: 80px !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        }
+        /* Chefs section styling */
+        .chefs-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .chefs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+        .chef-card {
+            text-align: center;
+        }
+        .chef-card img {
+
+            object-fit: cover;
+            display: inline-block;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .chef-name {
+            margin-top: 12px;
+            font-weight: 700;
+            color: #333;
+        }
+        .chef-role {
+            color: #777;
+            font-size: 14px;
+        }
+        @media (max-width: 992px) {
+            .chefs-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .chefs-grid { grid-template-columns: 1fr; gap: 18px; }
+            .chef-card img { width: 140px; height: 140px; }
+            .chefs-section { padding: 40px 0; }
+        }
     </style>
 </head>
 
@@ -237,9 +308,73 @@
                 </section>
                 <!-- End Welcome Part -->
 
+                <!-- Start Our Story Section -->
+                <section class="welcome-part home-icon wow fadeInDown" style="padding: 80px 0; background-color: #f9f9f9;"
+                    data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4">
+                                <div style="background: #f0f8f0; padding: 40px; border-radius: 12px; position: relative;">
+                                    
+                                    <h1 style="color: #6b8e23; font-size: 32px; margin-bottom: 20px;">Kandy's Favourite South Indian & Sri Lankan Restaurant</h1>
+                                    <div style="display: flex; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+                                       <img src="images/logo.png" alt="Balaji Dosai Logo" style="width: 220px; margin-bottom: 20px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 32px; margin-bottom: 30px; color: #333;">Authentic Flavours in the Heart of Kandy</h2>
+                                <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                                    In a world where food brings people together with cultures and memories, we believe that authentic 
+                                    home-style cooking should be accessible to everyone. At <strong>Balaji Dosai</strong>, we bring you the 
+                                    <strong>taste of traditional South Indian and Sri Lankan cuisine</strong>, prepared with love and dedication 
+                                    to perfection. We're now a part of daily life for the people of Kandy and visitors from around the world.
+                                </p>
+                                <p style="color: #666; line-height: 1.8;">
+                                    Located on <strong>D.S. Senanayaka Street, Kandy</strong>, our restaurant offers an extensive menu featuring 
+                                    crispy dosai, flavourful kottu, authentic hoppers, traditional rice & curry, and much more — all made 
+                                    fresh from scratch with the same warmth, attention to detail, and highest standards every single day.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </main>
         <!-- End Main -->
+        <!-- Start Chefs Section -->
+        <section class="chefs-section">
+            <div class="container">
+                <div class="build-title text-center" style="margin-bottom: 30px;">
+                    <h2>Meet Our Chefs</h2>
+                    <p style="color:#666; max-width:700px; margin:8px auto 0;">Our passionate cooks bring family recipes and local flavours to every plate. Get to know the team behind Balaji Dosai.</p>
+                </div>
+                <div class="chefs-grid">
+                    <div class="chef-card">
+                        <img src="images/chef1.png" alt="Chef 1">
+                        <div class="chef-name">Chef Balaji</div>
+                        <div class="chef-role">Head Chef</div>
+                    </div>
+                    <div class="chef-card">
+                        <img src="images/chef2.png" alt="Chef 2">
+                        <div class="chef-name">Chef Anjali</div>
+                        <div class="chef-role">Dosai Specialist</div>
+                    </div>
+                    <div class="chef-card">
+                        <img src="images/chef3.png" alt="Chef 3">
+                        <div class="chef-name">Chef Ramesh</div>
+                        <div class="chef-role">Curries & Hoppers</div>
+                    </div>
+                    <div class="chef-card">
+                        <img src="images/chef4.png" alt="Chef 4">
+                        <div class="chef-name">Chef Nirmala</div>
+                        <div class="chef-role">Sweets & Sides</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Chefs Section -->
         <!-- Start Footer -->
         <footer>
             <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
