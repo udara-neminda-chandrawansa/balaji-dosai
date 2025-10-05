@@ -1409,7 +1409,8 @@
     background: white;
     /* border-radius: 15px; */
     padding: 50px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.1); */
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -1471,7 +1472,7 @@ textarea.form-control {
 }
 
 .terms-checkbox label {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #666;
 }
 
@@ -1516,7 +1517,7 @@ textarea.form-control {
 .info-content p {
     color: #666;
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 .map-container {
@@ -1578,5 +1579,9 @@ textarea.form-control {
 @media (max-width: 1200px) {
     .contact-right{
         margin-top: 30px;
+    }
+    .contact-section{
+        margin-bottom: 80px;
+        box-shadow: none;
     }
 }

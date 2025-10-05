@@ -1,3 +1,12 @@
+<!-- Page pre loader -->
+    <div id="pre-loader" style="display: none;">
+        <div class="loader-holder">
+            <div class="frame">
+                <img src="images/Preloader.gif" alt="Balaji Dosai" />
+            </div>
+        </div>
+    </div>
+
 <!-- Start Slider Part 
 <section class="home-slider">
     <div class="tp-banner-container">
@@ -348,3 +357,457 @@
     data-endspeed="300"><a href="#" class="button-white">Explore NOW</a>
 </div>
 -->
+
+
+        <!-- Start Book Table -->
+        <div class="modal fade booktable" id="booktable" tabindex="-1" role="dialog" aria-labelledby="booktable">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <div class="table-title">
+                            <h2>Reservation</h2>
+                            <h6 class="heade-xs">Book a class reservation.</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="select-dropbox">
+                                    <option>Hour</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="select-dropbox">
+                                    <option>Number of People</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="txt" placeholder="Pick a Date" class="date-pick">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="txt" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <input type="email" name="email" placeholder="Email Address">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <button class="btn-main btn-big">BOOK A CLASS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Book Table -->
+
+
+        <!-- Start Footer (hidden)-->
+        <footer class="bd-footer d-none">
+            <div class="bd-container">
+                <div class="bd-footer-content">
+                    <div class="bd-brand-section">
+                        <div class="bd-brand">
+                            <img src="images/logo.png" alt="Balaji Dosai" class="bd-logo">
+                            <div class="bd-tagline">AUTHENTIC SRI LANKAN RESTAURANT</div>
+                        </div>
+                        <p class="bd-description">
+                            Balaji Dosai began with a simple dream in Kandy and has grown into a symbol of authentic Sri
+                            Lankan cuisine. With years of tradition, taste, and trust, we continue to serve delicious
+                            food made with passion, discipline, and innovation.
+                        </p>
+                    </div>
+
+                    <div class="bd-links-section">
+                        <div class="bd-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="bd-quick-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Contact us</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="bd-links-column">
+                            <h3>Contact Information</h3>
+                            <div class="bd-contact-item">
+                                <div class="bd-contact-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <span>support@balajidosai.lk</span>
+                            </div>
+                            <div class="bd-contact-item bd-mt-20">
+                                <div class="bd-contact-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <span>0812 224 593</span>
+                            </div>
+                            <div class="bd-contact-item">
+                                <div class="bd-contact-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <span>03, D.S. Senanayaka street,<br>Kandy, Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="bd-divider">
+
+                <div class="bd-footer-bottom">
+                    <div class="bd-copyright">2025 © All Rights Reserved | Balaji Dosai | Designed & Developed by
+                        Silicon Radon Networks (Pvt) Ltd.</div>
+                    <div class="bd-policies">
+                        <a href="#">Terms and Conditions</a>
+                        <span class="bd-separator">|</span>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+                <!-- Start Feature list (hidden) -->
+                <section class="bg-skeen feature-list text-center home-icon wow fadeInDown d-none"
+                    data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="icon-default icon-skeen">
+                        <img src="images/icon22.png" alt="Benefits Icon">
+                    </div>
+                    <div class="container">
+                        <div class="build-title">
+                            <h2>Why Choose Balaji Dosai?</h2>
+                            <h6>We blend authentic Sri Lankan cooking with unforgettable cultural experiences.</h6>
+                        </div>
+                        <div class="row">
+                            <!-- Feature 1 -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="feature-list-icon">
+                                    <div class="feature-icon-table">
+                                        <img src="images/img9.png" alt="Local Ingredients Icon">
+                                    </div>
+                                </div>
+                                <h5>Local Ingredients</h5>
+                                <p>Cook with fresh coconut, aromatic spices, and seasonal produce sourced from nearby
+                                    markets.</p>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="feature-list-icon">
+                                    <div class="feature-icon-table">
+                                        <img src="images/img10.png" alt="Hands-On Learning Icon">
+                                    </div>
+                                </div>
+                                <h5>Hands-On Learning</h5>
+                                <p>No watching from the sidelines! Chop, grind, and stir like a local under expert
+                                    guidance.</p>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="feature-list-icon">
+                                    <div class="feature-icon-table">
+                                        <img src="images/img11.png" alt="Small Groups Icon">
+                                    </div>
+                                </div>
+                                <h5>Small Groups</h5>
+                                <p>Intimate classes (max 8 people) ensure personalized attention and a friendly vibe.
+                                </p>
+                            </div>
+                            <!-- Feature 4 -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="feature-list-icon">
+                                    <div class="feature-icon-table">
+                                        <img src="images/img12.png" alt="Recipe Book Icon">
+                                    </div>
+                                </div>
+                                <h5>Take Home Recipes</h5>
+                                <p>Receive a digital recipe book with step-by-step guides to recreate dishes abroad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Start Menu Part (Updated for Class Types) (hidden) -->
+                <section class="special-menu bg-skeen home-icon wow fadeInDown hidden" data-wow-duration="1000ms"
+                    data-wow-delay="300ms">
+                    <div class="icon-default icon-skeen">
+                        <img src="images/icon6.png" alt="Class Icon">
+                    </div>
+                    <div class="container">
+                        <div class="build-title">
+                            <h2>Our Cooking Classes</h2>
+                            <h6>Choose from a variety of immersive experiences, each focusing on Sri Lanka’s rich
+                                culinary traditions.</h6>
+                        </div>
+                        <div class="menu-wrapper">
+                            <div class="portfolioFilter">
+                                <div class="portfolioFilter-inner">
+                                    <a href="javascript:;" data-filter="*" class="current">All Classes</a>
+                                    <a href="javascript:;" data-filter=".breakfast">SHORT CLASSES</a>
+                                    <a href="javascript:;" data-filter=".dessert">FULL-DAY WORKSHOPS</a>
+                                    <a href="javascript:;" data-filter=".dinner">MARKET TOURS</a>
+                                </div>
+                            </div>
+                            <div class="portfolioContainer row">
+                                <div class="col-md-6 col-sm-6 col-xs-12 isotope-item breakfast">
+                                    <div class="menu-list">
+                                        <span class="menu-list-product">
+                                            <img src="images/img3.png" alt="Short Class">
+                                        </span>
+                                        <h5>2-Hour Express Class</h5>
+                                        <p>Quickly learn 2-3 signature dishes, perfect for travelers on a tight
+                                            schedule.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 isotope-item dinner">
+                                    <div class="menu-list">
+                                        <span class="menu-list-product">
+                                            <img src="images/img4.png" alt="Full Workshop">
+                                        </span>
+                                        <h5>Half-Day Immersion</h5>
+                                        <p>Dive deeper into Sri Lankan cuisine with 4-5 dishes and cultural insights.
+                                            Kandy Central Market will e=be explored to gather ingredients.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 isotope-item dessert">
+                                    <div class="menu-list">
+                                        <span class="menu-list-product">
+                                            <img src="images/img5.png" alt="Market Tours">
+                                        </span>
+                                        <h5>Spice Market + Cooking</h5>
+                                        <p>Tour a local market to source ingredients, then cook a feast.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center my-price-txt">* All the classes are valued at $25 (7,500.00 LKR)
+                                Additional $5 will be deducted for the Market Tour</p>
+                            <div class="btn-outer">
+                                <a href="#" class="btn-main btn-shadow">View All Classes</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Menu Part -->
+
+                <!-- Start Class Hours (hidden) -->
+                <section class="food-hours home-icon wow fadeInDown hidden" data-stellar-offset-parent="true"
+                    data-stellar-background-ratio="0.5" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="icon-default icon-green">
+                        <img src="images/icon19.png" alt="Class Schedule Icon">
+                    </div>
+                    <div class="container">
+                        <div class="food-blog">
+                            <div class="row">
+                                <!-- Morning Class -->
+                                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                                    <div class="food-blog-inner">
+                                        <div class="food-item">
+                                            <div class="food-item-inner">
+                                                <img src="images/icon31.png" alt="Sunrise Icon">
+                                            </div>
+                                        </div>
+                                        <h2>Morning Class</h2>
+                                        <span>8.00 AM - 11.00 AM</span>
+                                        <p>Learn to cook a traditional Sri Lankan breakfast: hoppers, coconut sambol,
+                                            and spicy curries.</p>
+                                    </div>
+                                </div>
+                                <!-- Afternoon Class -->
+                                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                                    <div class="food-blog-inner">
+                                        <div class="food-item">
+                                            <div class="food-item-inner">
+                                                <img src="images/icon32.png" alt="Chef Hat Icon">
+                                            </div>
+                                        </div>
+                                        <h2>Afternoon Class</h2>
+                                        <span>1.00 PM - 4.00 PM</span>
+                                        <p>Master lunch staples like kottu roti, dhal curry, and mango chutney.</p>
+                                    </div>
+                                </div>
+                                <!-- Evening Class -->
+                                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                                    <div class="food-blog-inner">
+                                        <div class="food-item">
+                                            <div class="food-item-inner">
+                                                <img src="images/icon33.png" alt="Spice Icon">
+                                            </div>
+                                        </div>
+                                        <h2>Evening Class</h2>
+                                        <span>5.00 PM - 8.00 PM</span>
+                                        <p>Create a festive dinner spread: lamprais, seafood curries, and watalappan
+                                            (coconut custard).</p>
+                                    </div>
+                                </div>
+                                <!-- Private Group -->
+                                <div class="col-md-3 col-sm-3 col-xs-12 food-mxs">
+                                    <div class="food-blog-inner">
+                                        <div class="food-item">
+                                            <div class="food-item-inner">
+                                                <img src="images/icon34.png" alt="Group Icon">
+                                            </div>
+                                        </div>
+                                        <h2>Private Groups</h2>
+                                        <span>Flexible Hours</span>
+                                        <p>Custom classes for families, couples, or corporate teams. Book your preferred
+                                            time!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Class Hours -->
+
+
+                <!--Food Cards (hidden)-->
+                <div class="bg-black d-none" style="padding-top: 30px;">
+                    <div class="container">
+                        <div class="row g-1" style="padding-bottom: 60px;">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/rice-curry.webp) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Rice and<br>Curry</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/milk-rice.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Milk<br>Rice</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/string-hoppers.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">String<br>Hoppers</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/pittu.jpeg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Pittu</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/coco-roti.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Coconut <br>Roti</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/halapa.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Halapa</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/coco-sambol.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Coconut <br>Sambol</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <div class="card-background"
+                                        style="background: url(images/food-cards/hoppers.jpg) no-repeat;"></div>
+                                    <div class="overlay"></div>
+                                    <div class="frame-border"></div>
+                                    <div class="card-content">
+                                        <h1 class="title">Hoppers</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Dishes Part (hidden) -->
+                <section class="dishes banner-bg invert invert-black home-icon wow fadeInDown hidden"
+                    data-background="images/banner1.jpg" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="icon-default icon-white">
+                        <img src="images/icon5.png" alt="Sri Lankan Spices">
+                    </div>
+                    <div class="container">
+                        <div class="build-title">
+                            <h2>Popular Dishes You’ll Learn</h2>
+                            <h6>From fiery curries to sweet treats, Sri Lankan cuisine is a feast for the senses. Here’s
+                                a taste of what you’ll master:</h6>
+                        </div>
+                        <div class="slider multiple-items">
+                            <div class="product-blog">
+                                <img src="images/food-cards/egg-hoppers.jpg" alt="Egg Hoppers"
+                                    style="height: 250px; aspect-ratio: 1/1; border-radius: 999px; object-fit: cover;">
+                                <h3>Egg Hoppers</h3>
+                                <p>Crispy, bowl-shaped pancakes with a perfectly runny egg center.</p>
+                                <del class="hidden">$25 (Rs.7,500.00)</del><strong class="txt-default">$25 (Rs.7,500.00)
+                                    per person</strong>
+                            </div>
+                            <div class="product-blog">
+                                <img src="images/food-cards/kottu.jpg" alt="Egg Hoppers"
+                                    style="height: 250px; aspect-ratio: 1/1; border-radius: 999px; object-fit: cover;">
+                                <h3>Kottu Roti</h3>
+                                <p>Chopped flatbread stir-fried with veggies, egg, and aromatic spices.</p>
+                                <del class="hidden">$25 (Rs.7,500.00)</del><strong class="txt-default">$25 (Rs.7,500.00)
+                                    per person</strong>
+                            </div>
+                            <div class="product-blog">
+                                <img src="images/food-cards/coco-sambol.jpg" alt="Egg Hoppers"
+                                    style="height: 250px; aspect-ratio: 1/1; border-radius: 999px; object-fit: cover;">
+                                <h3>Pol Sambol</h3>
+                                <p>A spicy coconut relish that pairs perfectly with rice or hoppers.</p>
+                                <del class="hidden">$25 (Rs.7,500.00)</del><strong class="txt-default">$25 (Rs.7,500.00)
+                                    per person</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Dishes Part -->
