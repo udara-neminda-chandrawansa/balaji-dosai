@@ -181,7 +181,15 @@
 @media (max-width: 1200px) {
     .rotating-foods, .plate-image {
     left: 50%;
+
+    
 }
+}
+
+@media (min-width: 1200px) {
+    .text-lg-start{
+        text-align: start !important;
+    }
 }
 
 .food-orbit {
