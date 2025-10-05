@@ -213,7 +213,7 @@
         .comment-input-wrapper {
             display: flex;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 1px;
         }
 
         .comment-input {
@@ -231,21 +231,42 @@
             border-color: #c89860;
         }
 
+        /* Icon-only submit button: show only the paper-plane icon by default */
         .comment-submit {
-            background: linear-gradient(90deg, #c89860 0%, #e8d4a8 100%);
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            color: #fff;
+            background: transparent; /* no visible pill by default */
+            border: 1px solid rgba(200,152,96,0.08); /* subtle ring to make button area visible */
+            padding: 6px; /* small hit area around icon */
+            border-radius: 50%;
+            color: #c89860; /* fallback color */
             font-weight: 600;
             cursor: pointer;
-            font-size: 13px;
-            transition: all 0.3s ease;
+            font-size: 0; /* hide any stray text spacing */
+            transition: all 0.18s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-clip: padding-box;
+            transform: translateY(6px); /* nudge down so it lines up with input */
         }
 
-        .comment-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(200, 152, 96, 0.3);
+        /* Icon size and color */
+        .comment-submit i {
+            font-size: 18px;
+            color: #c89860; /* show icon in brand color when not hovered */
+            opacity: 0.95;
+            transition: transform 0.18s ease, opacity 0.18s ease, color 0.12s ease;
+            transform: translateY(2px); /* small visual tweak to sit lower inside the circle */
+        }
+
+
+
+        .comment-submit:hover i,
+        .comment-submit:focus i {
+            transform: translateY(-0.5px);
+            color: #bd690a;
+            opacity: 1;
         }
 
         .comment-submit:disabled {
@@ -485,7 +506,10 @@
                                         <div class="comment-section">
                                             <div class="comment-input-wrapper">
                                                 <input type="text" class="comment-input" placeholder="Add a comment...">
-                                                <button class="comment-submit">Post</button>
+                                                <button class="comment-submit">
+                                                    <i class="bi bi-send-fill"></i>
+                                                    
+                                                </button>
                                             </div>
                                             <div class="comments-list"></div>
                                         </div>
@@ -521,7 +545,10 @@
                                         <div class="comment-section">
                                             <div class="comment-input-wrapper">
                                                 <input type="text" class="comment-input" placeholder="Add a comment...">
-                                                <button class="comment-submit">Post</button>
+                                                <button class="comment-submit">
+                                                    <i class="bi bi-send-fill"></i>
+                                                    
+                                                </button>
                                             </div>
                                             <div class="comments-list"></div>
                                         </div>
@@ -557,7 +584,10 @@
                                         <div class="comment-section">
                                             <div class="comment-input-wrapper">
                                                 <input type="text" class="comment-input" placeholder="Add a comment...">
-                                                <button class="comment-submit">Post</button>
+                                                <button class="comment-submit">
+                                                    <i class="bi bi-send-fill"></i>
+                                                   
+                                                </button>
                                             </div>
                                             <div class="comments-list"></div>
                                         </div>
@@ -593,7 +623,10 @@
                                         <div class="comment-section">
                                             <div class="comment-input-wrapper">
                                                 <input type="text" class="comment-input" placeholder="Add a comment...">
-                                                <button class="comment-submit">Post</button>
+                                                <button class="comment-submit">
+                                                    <i class="bi bi-send-fill"></i>
+                                                   
+                                                </button>
                                             </div>
                                             <div class="comments-list"></div>
                                         </div>
