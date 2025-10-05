@@ -240,6 +240,15 @@
     z-index: 10;
 }
 
+/* Contact section: remove heavy title/subtitle shadow for readability */
+.contact-part .title,
+.contact-part .title h2,
+.contact-part .title h6,
+.contact-part .heade-xs {
+    text-shadow: none !important;
+}
+
+
 /* Position each food item in a circle */
 .food-1 {
     transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
