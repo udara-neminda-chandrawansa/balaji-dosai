@@ -1464,10 +1464,7 @@
 /*custom contact us section*/
 .contact-section {
     background: white;
-    /* border-radius: 15px; */
-    padding: 50px;
-    /* box-shadow: 0 5px 20px rgba(0,0,0,0.1); */
-    margin-bottom: 20px;
+
 }
 
 .section-title {
@@ -2125,7 +2122,7 @@ textarea.form-control {
     font-size: 17px;
     font-weight: 600;
     color: #2d2d2d;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Cinzel', serif;
     transition: all 0.3s ease;
 }
 
