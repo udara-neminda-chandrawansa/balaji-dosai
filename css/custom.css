@@ -1090,7 +1090,7 @@
 }
 
 .wplu-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.2;
@@ -1103,6 +1103,7 @@
     color: #666;
     line-height: 1.8;
     margin-bottom: 35px;
+    font-family: 'Futura', sans-serif;
 }
 
 .wplu-features {
@@ -1708,13 +1709,13 @@ textarea.form-control {
     font-weight: 700;
     color: #2d2d2d;
     margin-bottom: 10px;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
 }
 
 .menu-subtitle {
     font-size: 18px;
     color: #666;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 /* Menu Tabs */
