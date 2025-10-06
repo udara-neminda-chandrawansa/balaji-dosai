@@ -88,6 +88,8 @@
                 display: block !important;
                 margin: 0 auto !important;
             }
+            /* Hide decorative top icon in welcome section on mobile to avoid overlay */
+            .welcome-part .icon-default { display: none !important; }
         }
         /* Chefs section styling */
         .chefs-section {
@@ -124,7 +126,8 @@
         @media (max-width: 576px) {
             .chefs-grid { grid-template-columns: 1fr; gap: 18px; }
             .chef-card img { width: 140px; height: 140px; }
-            .chefs-section { padding: 40px 0; }
+            .chefs-section { padding: 90px 0; }
+
         }
     </style>
 </head>
