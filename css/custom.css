@@ -18,7 +18,7 @@
 
 .hero-section {
     min-height: calc(100dvh - var(--nav-height));
-    background: linear-gradient(135deg, #fdfbf7 0%, #f5f1ea 100%);
+    background: linear-gradient(135deg, #f5faf3 0%, #e8f5e0 100%);
     position: relative;
     overflow: hidden;
     padding: 0px 70px !important;
@@ -43,8 +43,8 @@
 }
 
 .welcome-badge {
-    background: linear-gradient(90deg, #f4e4c1 0%, #e8d4a8 100%);
-    color: #c89860;
+    background: linear-gradient(90deg, #c9e4c0 0%, #a8d99c 100%);
+    color: #6aa84f;
     padding: 8px 24px;
     border-radius: 30px;
     font-family: 'Lora', serif;
@@ -52,7 +52,7 @@
     font-size: 13px;
     display: inline-block;
     margin-bottom: 30px !important;
-    box-shadow: 0 2px 10px rgba(200, 152, 96, 0.2);
+    box-shadow: 0 2px 10px rgba(106, 168, 79, 0.2);
 }
 
 /* Lift the welcome badge slightly on large screens so it sits closer to the top-left of the hero content */
@@ -80,10 +80,11 @@
     line-height: 1.6;
     margin-bottom: 40px;
     max-width: 500px;
+    font-family: 'Futura', sans-serif;
 }
 
 .btn-menu {
-    background: linear-gradient(135deg, #c89860 0%, #b8885a 100%);
+    background: linear-gradient(135deg, #6aa84f 0%, #5a9340 100%);
     color: white;
     padding: 14px 36px;
     border: none;
@@ -95,12 +96,12 @@
 
 .btn-menu:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(200, 152, 96, 0.4);
+    box-shadow: 0 5px 20px rgba(106, 168, 79, 0.4);
     color: white;
 }
 
 .btn-contact {
-    background: #000;
+    background: #6aa84f;
     color: white;
     padding: 14px 36px;
     border: none;
@@ -111,7 +112,8 @@
 
 .btn-contact:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(45, 45, 45, 0.4);
+    box-shadow: 0 5px 20px rgba(106, 168, 79, 0.4);
+    background: #5a9340;
     color: white;
 }
 
@@ -1040,6 +1042,7 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 20px;
+    font-family: 'Futura', sans-serif;
 }
 
 /* About section decorative SVG */
@@ -1089,7 +1092,7 @@
 }
 
 .wplu-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.2;
@@ -1102,6 +1105,7 @@
     color: #666;
     line-height: 1.8;
     margin-bottom: 35px;
+    font-family: 'Futura', sans-serif;
 }
 
 .wplu-features {
@@ -1118,6 +1122,7 @@
     font-size: 16px;
     color: #333;
     line-height: 1.6;
+    font-family: 'Futura', sans-serif;
 }
 
 .wplu-icon {
@@ -1289,6 +1294,7 @@
     font-size: 16px;
     margin-bottom: 15px;
     font-weight: 500;
+    font-family: 'Futura', sans-serif;
 }
 
 .journey-title {
@@ -1296,6 +1302,7 @@
     line-height: 1.3;
     margin-bottom: 25px;
     color: #2d3436;
+    font-family: 'Cinzel', serif;
 }
 
 .journey-title-highlight {
@@ -1307,6 +1314,7 @@
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 0;
+    font-family: 'Futura', sans-serif;
 }
 
 .journey-image-wrapper {
@@ -1467,32 +1475,37 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 30px;
+    font-family: 'Cinzel', serif;
 }
 
 .section-desc{
     margin-bottom: 30px;
+    font-family: 'Futura', sans-serif;
 }
 
 .sub-heading {
-    color: #c9a866;
+    color: #6aa84f;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 10px;
     font-style: italic;
+    font-family: 'Futura', sans-serif;
 }
 
 .form-control {
-    background-color: #f5f3f0;
-    border: none;
+    background: linear-gradient(135deg, #f5faf3 0%, #e8f5e0 100%);
+    border: 1px solid #d4e8cc;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
 .form-control:focus {
-    background-color: #ebe9e6;
-    box-shadow: none;
+    background: linear-gradient(135deg, #e8f5e0 0%, #dff0d8 100%);
+    box-shadow: 0 0 0 3px rgba(106, 168, 79, 0.1);
     outline: none;
+    border-color: #6aa84f;
 }
 
 textarea.form-control {
@@ -1501,7 +1514,7 @@ textarea.form-control {
 }
 
 .send-btn {
-    background-color: #c9a866;
+    background-color: #6aa84f;
     color: white;
     border: none;
     padding: 15px;
@@ -1512,7 +1525,7 @@ textarea.form-control {
 }
 
 .send-btn:hover {
-    background-color: #b89655;
+    background-color: #5a9340;
     transform: translateY(-2px);
 }
 
@@ -1526,7 +1539,7 @@ textarea.form-control {
 }
 
 .terms-checkbox a {
-    color: #c9a866;
+    color: #6aa84f;
     text-decoration: none;
 }
 
@@ -1545,8 +1558,8 @@ textarea.form-control {
 }
 
 .info-icon {
-    background-color: #fef6e8;
-    color: #c9a866;
+    background: linear-gradient(135deg, #c9e4c0 0%, #a8d99c 100%);
+    color: #6aa84f;
     width: 45px;
     height: 45px;
     border-radius: 8px;
@@ -1561,12 +1574,14 @@ textarea.form-control {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
+    font-family: 'Cinzel', serif;
 }
 
 .info-content p {
     color: #666;
     margin: 0;
     font-size: 1.2rem;
+    font-family: 'Futura', sans-serif;
 }
 
 .map-container {
@@ -1705,13 +1720,13 @@ textarea.form-control {
     font-weight: 700;
     color: #2d2d2d;
     margin-bottom: 10px;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
 }
 
 .menu-subtitle {
     font-size: 18px;
     color: #666;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 /* Menu Tabs */
@@ -1737,26 +1752,26 @@ textarea.form-control {
 }
 
 .menu-tab:first-child {
-    border-color: #f4a340;
-    background: #f4a340;
+    border-color: #6aa84f;
+    background: #6aa84f;
     color: #fff;
 }
 
 .menu-tab:not(:first-child) {
-    background: #f4a340;
+    background: #6aa84f;
     color: #fff;
 }
 
 .menu-tab:hover {
-    background: #e89330;
+    background: #5a9340;
     color: #fff;
     transform: translateY(-2px);
 }
 
 .menu-tab.active {
     background: #fff;
-    color: #f4a340;
-    border-color: #f4a340;
+    color: #6aa84f;
+    border-color: #6aa84f;
 }
 
 /* Menu Grid */
@@ -1769,12 +1784,13 @@ textarea.form-control {
 }
 
 .menu-item {
-    background: #fff;
+    background: linear-gradient(135deg, #f5faf3 0%, #e8f5e0 100%);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     display: none; /* Hidden by default */
+    border: 1px solid #d4e8cc;
 }
 
 .menu-item.active {
@@ -1784,7 +1800,8 @@ textarea.form-control {
 
 .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(106, 168, 79, 0.15);
+    border-color: #6aa84f;
 }
 
 .menu-item-image {
@@ -1792,7 +1809,7 @@ textarea.form-control {
     height: 250px;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(135deg, #f4e4c1 0%, #e8d4a8 100%);
+    background: linear-gradient(135deg, #c9e4c0 0%, #a8d99c 100%);
 }
 
 .menu-item-image img {
@@ -1885,14 +1902,14 @@ textarea.form-control {
     font-weight: 700;
     color: #2d2d2d;
     margin-bottom: 10px;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
     letter-spacing: 2px;
 }
 
 .testimonials-subtitle {
     font-size: 18px;
     color: #666;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 /* Testimonials Grid */
@@ -1940,7 +1957,7 @@ textarea.form-control {
     line-height: 1.7;
     color: #333;
     margin-bottom: 25px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
     flex-grow: 1;
 }
 
@@ -1977,7 +1994,7 @@ textarea.form-control {
     font-weight: 600;
     color: #2d2d2d;
     margin-bottom: 5px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 .author-rating {
@@ -2057,14 +2074,14 @@ textarea.form-control {
     font-weight: 700;
     color: #2d2d2d;
     margin-bottom: 10px;
-    font-family: 'Lora', serif;
+    font-family: 'Cinzel', serif;
     letter-spacing: 2px;
 }
 
 .faq-title-underline {
     width: 80px;
     height: 3px;
-    background: #f4a340;
+    background: #6aa84f;
     margin: 0 auto 20px;
     border-radius: 2px;
 }
@@ -2072,7 +2089,7 @@ textarea.form-control {
 .faq-subtitle {
     font-size: 18px;
     color: #666;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 /* FAQ Accordion */
@@ -2083,8 +2100,8 @@ textarea.form-control {
 }
 
 .faq-item {
-    background: #fff;
-    border: 2px solid #f4a340;
+    background: linear-gradient(135deg, #f5faf3 0%, #e8f5e0 100%);
+    border: 2px solid #6aa84f;
     border-radius: 12px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -2092,7 +2109,7 @@ textarea.form-control {
 }
 
 .faq-item:hover {
-    box-shadow: 0 4px 15px rgba(244, 163, 64, 0.2);
+    box-shadow: 0 4px 15px rgba(106, 168, 79, 0.2);
 }
 
 .faq-question {
@@ -2113,14 +2130,14 @@ textarea.form-control {
 }
 
 .faq-question:hover {
-    color: #f4a340;
+    color: #6aa84f;
 }
 
 .faq-icon {
     flex-shrink: 0;
     width: 40px;
     height: 40px;
-    background: #f4a340;
+    background: #6aa84f;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2150,7 +2167,7 @@ textarea.form-control {
     line-height: 1.7;
     color: #555;
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 /* Responsive Design */
