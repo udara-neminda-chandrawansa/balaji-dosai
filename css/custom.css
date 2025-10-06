@@ -1907,7 +1907,7 @@ textarea.form-control {
 
 /* Testimonial Card */
 .testimonial-card {
-    background: linear-gradient(135deg, #fef9f0 0%, #fdf5e6 100%);
+    background: linear-gradient(135deg, #f5faf3 0%, #e8f5e0 100%);
     border-radius: 16px;
     padding: 35px 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1916,17 +1916,19 @@ textarea.form-control {
     display: flex;
     flex-direction: column;
     min-height: 320px;
+    border: 1px solid #d4e8cc;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(106, 168, 79, 0.15);
+    border-color: #6aa84f;
 }
 
 /* Quote Icon */
 .quote-icon {
     font-size: 48px;
-    color: #f4a340;
+    color: #6aa84f;
     line-height: 1;
     margin-bottom: 15px;
     font-family: Georgia, serif;
@@ -1955,8 +1957,9 @@ textarea.form-control {
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    background: #e8d4a8;
+    background: linear-gradient(135deg, #c9e4c0 0%, #a8d99c 100%);
     flex-shrink: 0;
+    border: 2px solid #6aa84f;
 }
 
 .author-avatar img {
@@ -1979,7 +1982,7 @@ textarea.form-control {
 
 .author-rating {
     font-size: 14px;
-    color: #f4a340;
+    color: #6aa84f;
 }
 
 /* Responsive Design */
