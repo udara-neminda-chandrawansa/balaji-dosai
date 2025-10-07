@@ -703,8 +703,58 @@
     font-size: 16px;
     font-weight: 600;
     color: var(--dark-green);
-    margin: 0 20px 20px;
+    margin: 0 20px 10px;
     text-align: center;
+}
+
+/* Product Action Buttons */
+.product-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 20px;
+}
+
+.btn-product-action {
+    flex: 1;
+    background: white;
+    border: 2px solid var(--light-green);
+    color: var(--dark-green);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-product-action:hover {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+    border-color: var(--dark-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 143, 90, 0.3);
+}
+
+.btn-product-action:active {
+    transform: translateY(0);
+}
+
+.btn-product-action i {
+    font-size: 18px;
+}
+
+/* Specific button styles */
+.btn-add-cart:hover {
+    background: linear-gradient(135deg, #8BC34A 0%, #6B8F5A 100%);
+}
+
+.btn-view:hover {
+    background: linear-gradient(135deg, #6B8F5A 0%, #8BC34A 100%);
 }
 
 /* Responsive Design for Mixture Section */
@@ -763,7 +813,21 @@
     
     .product-price {
         font-size: 14px;
-        margin: 0 15px 15px;
+        margin: 0 15px 10px;
+    }
+    
+    .product-actions {
+        padding: 0 15px 15px;
+        gap: 8px;
+    }
+    
+    .btn-product-action {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .btn-product-action i {
+        font-size: 16px;
     }
 }
 
@@ -2962,4 +3026,184 @@ textarea.form-control {
     .faq-answer p {
         font-size: 14px;
     }
+}
+
+/* ============================================
+   TRADITION BANNER SECTION STYLES
+   ============================================ */
+
+.tradition-banner-section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+    background: var(--cream-color);
+}
+
+.banner-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(0, 0, 0, 0.7) 0%, 
+        rgba(0, 0, 0, 0.5) 50%, 
+        rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+}
+
+.banner-content-wrapper {
+    position: relative;
+    z-index: 3;
+}
+
+.banner-text-content {
+    color: white;
+    padding: 20px 0;
+}
+
+.banner-since {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--light-green);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner-main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-description {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.btn-banner-read-more {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 143, 90, 0.3);
+}
+
+.btn-banner-read-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(107, 143, 90, 0.5);
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%);
+    color: white;
+}
+
+/* Responsive Design for Banner */
+@media (max-width: 991px) {
+    .tradition-banner-section {
+        padding: 80px 0;
+        min-height: 450px;
+    }
+    
+    .banner-main-title {
+        font-size: 40px;
+    }
+    
+    .banner-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tradition-banner-section {
+        padding: 60px 0;
+        min-height: 400px;
+    }
+    
+    .banner-since {
+        font-size: 14px;
+    }
+    
+    .banner-main-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .banner-description {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .btn-banner-read-more {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-main-title {
+        font-size: 28px;
+    }
+    
+    .banner-description {
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   FOOTER FIX - PREVENT OVERLAP
+   ============================================ */
+
+footer {
+    position: relative;
+    z-index: 10;
+    background: #1a1a1a;
+    margin-top: 0;
+}
+
+.footer-part {
+    position: relative;
+    z-index: 10;
+
+}
+
+.tradition-banner-section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+    background: var(--cream-color);
+    margin-bottom: 0;
+    z-index: 1;
 }
