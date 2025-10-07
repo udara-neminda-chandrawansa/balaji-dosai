@@ -1,5 +1,10 @@
 :root {
-    --nav-height: 0px;
+    --nav-height: 80px;
+    --cream-color: #FFF8E7;
+    --light-green: #B8D4A0;
+    --dark-green: #6B8F5A;
+    --accent-green: #8BC34A;
+    --text-dark: #2C3E2C;
 }
 
 .d-none {
@@ -15,6 +20,756 @@
         display: inline-block !important;
     }
 }
+
+/* ============================================
+   MODERN NAVIGATION STYLES
+   ============================================ */
+
+.modern-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--cream-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(107, 143, 90, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar-modern {
+    padding: 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Styles */
+.nav-logo {
+    flex-shrink: 0;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Menu */
+.nav-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--dark-green);
+    background: var(--light-green);
+}
+
+.nav-link.active {
+    color: var(--dark-green);
+    background: var(--light-green);
+}
+
+/* Login Button */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 143, 90, 0.3);
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 143, 90, 0.5);
+    color: white;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: var(--dark-green);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover span {
+    background: var(--accent-green);
+}
+
+/* Mobile Menu Styles */
+.mobile-nav-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--cream-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(107, 143, 90, 0.2);
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.mobile-nav-menu.active {
+    display: block;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 15px 40px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-nav-link:hover {
+    background: var(--light-green);
+    border-left-color: var(--dark-green);
+    color: var(--dark-green);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-wrapper {
+        padding: 15px 30px;
+    }
+    
+    .nav-links {
+        gap: 2px;
+    }
+    
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .btn-login {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* Hide specific menu items on screens smaller than 992px */
+    .hidden-on-min-992 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-wrapper {
+        padding: 12px 20px;
+    }
+    
+    .logo-image {
+        height: 40px;
+    }
+    
+    .btn-login {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .mobile-nav-link {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
+
+/* ============================================
+   NEW DOSA COFFEE HERO SECTION STYLES
+   ============================================ */
+
+.dosa-hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--cream-color) 0%, #FFF5DC 100%);
+    padding-top: 80px; /* Account for fixed header */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1; /* Show background fully */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 248, 231, 0.8) 0%, 
+        rgba(184, 212, 160, 0.3) 50%, 
+        rgba(255, 248, 231, 0.7) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    padding: 80px 15px;
+}
+
+/* Left Content Styles */
+.hero-content-left {
+    padding: 20px;
+}
+
+.hero-logo {
+    margin-bottom: 30px;
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--light-green) 0%, #D4E8C1 100%);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(107, 143, 90, 0.2);
+}
+
+.badge-icon {
+    font-size: 20px;
+}
+
+.badge-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.hero-main-title {
+    font-family: 'Cinzel', 'Quicksand', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Right Content - Food Display */
+.hero-food-display {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-food-image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+}
+
+/* Floating Food Items */
+.floating-food-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Masala Dosa Badge */
+.food-badge {
+    position: absolute;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    pointer-events: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+.food-badge-1 {
+    top: 15%;
+    left: -5%;
+    animation-delay: 0s;
+}
+
+.food-badge img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.food-name {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.rating {
+    font-size: 12px;
+}
+
+/* Happy Customer Badge */
+.customer-badge {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+    pointer-events: auto;
+}
+
+.customer-badge .emoji {
+    font-size: 40px;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.customer-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.customer-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.review-count {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Hero Buttons (Optional) */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn-primary-hero {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(107, 143, 90, 0.4);
+}
+
+.btn-primary-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(107, 143, 90, 0.6);
+    color: white;
+}
+
+.btn-secondary-hero {
+    background: white;
+    color: var(--dark-green);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--accent-green);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-hero:hover {
+    background: var(--accent-green);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .hero-main-title {
+        font-size: 40px;
+    }
+    
+    .hero-food-display {
+        margin-top: 50px;
+        height: 400px;
+    }
+    
+    .food-badge-1 {
+        left: 0%;
+        top: 10%;
+    }
+    
+    .customer-badge {
+        right: 0%;
+        top: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-main-title {
+        font-size: 32px;
+    }
+    
+    .logo-img {
+        max-width: 150px;
+    }
+    
+    .hero-food-display {
+        height: 350px;
+    }
+    
+    .food-badge {
+        padding: 8px 15px;
+        gap: 10px;
+    }
+    
+    .food-badge img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .customer-badge {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+    
+    .customer-badge .emoji {
+        font-size: 30px;
+    }
+    
+    .food-name,
+    .customer-title {
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   MIXTURE PRODUCTS SECTION STYLES
+   ============================================ */
+
+.mixture-section {
+    padding: 80px 0;
+    background: var(--white-color);
+    position: relative;
+}
+
+.mixture-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.mixture-title {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.btn-shop-now {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 143, 90, 0.3);
+}
+
+.btn-shop-now:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(107, 143, 90, 0.5);
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-green) 100%);
+    color: white;
+}
+
+/* Products Slider */
+.mixture-products-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    cursor: grab;
+    user-select: none;
+}
+
+.mixture-products-slider:active {
+    cursor: grabbing;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mixture-products-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Product Card */
+.mixture-product-card {
+    flex: 0 0 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.mixture-product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f5f5f5;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mixture-product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product-name {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 20px 20px 10px;
+    text-align: center;
+}
+
+.product-price {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin: 0 20px 20px;
+    text-align: center;
+}
+
+/* Responsive Design for Mixture Section */
+@media (max-width: 768px) {
+    .mixture-section {
+        padding: 60px 0;
+    }
+    
+    .mixture-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    
+    .mixture-title {
+        font-size: 32px;
+    }
+    
+    .btn-shop-now {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .mixture-product-card {
+        flex: 0 0 240px;
+    }
+    
+    .product-image-wrapper {
+        height: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mixture-title {
+        font-size: 28px;
+    }
+    
+    .mixture-products-slider {
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .mixture-product-card {
+        flex: 0 0 200px;
+    }
+    
+    .product-image-wrapper {
+        height: 200px;
+    }
+    
+    .product-name {
+        font-size: 16px;
+        margin: 15px 15px 8px;
+    }
+    
+    .product-price {
+        font-size: 14px;
+        margin: 0 15px 15px;
+    }
+}
+
+/* ============================================
+   OLD HERO SECTION STYLES (Keep for reference or remove)
+   ============================================ */
 
 .hero-section {
     min-height: calc(100dvh - var(--nav-height));

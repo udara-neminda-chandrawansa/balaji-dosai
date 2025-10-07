@@ -60,163 +60,132 @@
 <body>
     <div class="wrapper">
         <!-- Start Header -->
-        <header>
-            <div id="nav" class="header-part header-reduce sticky">
-                <div class="header-top">
-                    <div class="" style="padding: 0px 20px;">
-                        <div class="header-top-inner">
-                            <div class="header-top-left">
-                                <a href="#" class="top-cell">
-                                    <!-- <img src="images/fon.png" alt=""> -->
-                                    <span>Hotline: 0812 224 593</span>
-                                </a>
-                                <!-- <a href="#" class="top-email"><span>support@balajidosai.lk</span></a> -->
-                            </div>
-                            <!-- <div class="header-top-right">
-                                <div class="social-top">
-                                    <ul>
-                                        <li><a href="https://www.facebook.com/BalajiDosai"><i class="bi bi-facebook"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="language-menu" style="display: none;">
-                                    <a href="#" class="current-lang">English <i class="fa fa-caret-down"
-                                            aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Turkish</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right"
-                                                    aria-hidden="true"></i>Nederlands</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Français</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Deutsch</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Italiano</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom">
-                    <div class="" style="padding: 0px 20px;">
-                        <div class="header-info" style="padding: 0px; display: flex; justify-content: end;">
-                            <div class="w-100">
-                                <div class="menu-main w-100"
-                                    style="width: 100% !important; padding: 0px !important; margin: 0px !important;">
-                                    <ul style="padding: 0px !important; margin: 0px !important;">
-                                        <li>
-                                            <a href="services.html">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="gallery.html">Gallery</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contact Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-icon">
-                            <a href="#" class="hambarger">
-                                <span class="bar-1"></span>
-                                <span class="bar-2"></span>
-                                <span class="bar-3"></span>
+        <header class="modern-header">
+            <nav class="navbar-modern">
+                <div class="container-fluid">
+                    <div class="nav-wrapper">
+                        <!-- Left Side - Logo -->
+                        <div class="nav-logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Dosa Coffee" class="logo-image">
                             </a>
                         </div>
-                        <!--
-                        <div class="book-table header-collect book-sm">
-                            <a href="#" data-toggle="modal" data-target="#booktable"><img src="images/icon-table.png"
-                                    alt="">Book a Table</a>
-                        </div>
-                        -->
-                        <div class="menu-main">
-                            <ul class="list-style-none">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="specialties.html">Specialties</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="services.html">Services</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="gallery.html">Gallery</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="contact.html">Contact Us</a>
-                                </li>
+                        
+                        <!-- Center - Navigation Menu -->
+                        <div class="nav-menu">
+                            <ul class="nav-links">
+                                <li><a href="index.html" class="nav-link active">Home</a></li>
+                                <li><a href="about.html" class="nav-link">About Us</a></li>
+                                <li><a href="specialties.html" class="nav-link">Specialties</a></li>
+                                <li><a href="services.html" class="nav-link">Services</a></li>
+                                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        
+                        <!-- Right Side - Login Button -->
+                        <div class="nav-actions">
+                            <a href="#login" class="btn-login">Login</a>
+                            
+                            <!-- Mobile Menu Toggle -->
+                            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
                     </div>
                 </div>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-nav-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="specialties.html" class="mobile-nav-link">Specialties</a></li>
+                    <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+                </ul>
             </div>
         </header>
         <!-- End Header -->
         <!-- Start Main -->
         <main style="position: relative; z-index: auto;">
             <div class="main-part">
-                <!--my hero-->
-                <section class="hero-section">
-                    <div class="container-fluid">
+                <!-- Hero Section -->
+                <section class="dosa-hero-section">
+                    <!-- <div class="hero-background">
+                        <img src="images/Dosaiweb/660a54774dc4e5855645cd25_Banner background _ 1440.png" alt="Background" class="hero-bg-image">
+                    </div> -->
+                    
+                    <div class="hero-overlay"></div>
+                    
+                    <div class="container hero-container">
                         <div class="row align-items-center">
-                            <div class="col-lg-6 hero-content">
-                                <div class="ps-lg-5">
-                                    <div class="welcome-badge">Welcome To Balaji Dosai</div>
-                                    <h1 class="hero-title">Sense the<br>Sri Lankan<br>magic!</h1>
-                                    <p class="hero-description">
-                                        On the other hand, we denounce with righteous indignation and dislike men who
-                                        are so beguiled an item by the charms of pleasure of the moment with a righteous
-                                        hand.
-                                    </p>
-                                    <div class="button-group">
-                                        <a href="#menu" class="btn btn-menu">See the Menu</a>
-                                        <a href="#contact" class="btn btn-contact">Contact Us</a>
+                            <!-- Left Content -->
+                            <div class="col-lg-6">
+                                <div class="hero-content-left">
+                                    <!-- Logo -->
+                                    <div class="hero-logo">
+                                        <img src="images\logo.png" alt="Dosa Coffee" class="logo-img">
                                     </div>
+                                    
+                                    <!-- Badge -->
+                                    <div class="hero-badge">
+                                        <span class="badge-icon">😋</span>
+                                        <span class="badge-text">People Trust us</span>
+                                    </div>
+                                    
+                                    <!-- Main Title -->
+                                    <h1 class="hero-main-title">
+                                        GOODNESS THAT<br>
+                                        TASTE LIKE OH MY<br>
+                                        GOODNESS
+                                    </h1>
+                                    
+                                    <!-- Buttons (Optional - can be added later) -->
+                                    <!-- 
+                                    <div class="hero-buttons">
+                                        <a href="#menu" class="btn btn-primary-hero">Order Now</a>
+                                        <a href="#about" class="btn btn-secondary-hero">Learn More</a>
+                                    </div>
+                                    -->
                                 </div>
                             </div>
-
+                            
+                            <!-- Right Content - Food Images -->
                             <div class="col-lg-6">
-                                <div class="image-container">
-                                    <!-- Replace these src attributes with your actual image paths -->
-                                    <img src="images/hero-bgs/plate.webp" alt="Dosa Plate" class="plate-image">
-                                    <img src="images/hero-bgs/tall.webp" alt="Utensils" class="utensils-image">
-
-                                    <!-- Branch decorations - replace with your branch images -->
-                                    <img src="images/hero-bgs/leaf-up.webp" alt="" class="branch-decoration branch-1">
-                                    <img src="images/hero-bgs/leaf-down.webp" alt="" class="branch-decoration branch-2">
-
-                                    <!-- Rotating Food Images -->
-                                    <div class="rotating-foods">
-                                        <div class="food-orbit">
-                                            <img src="images/index/Ghee-Dos.webp" alt="Ghee Dosa"
-                                                class="food-item food-1">
-                                            <img src="images/index/Ghee-Pongal.webp" alt="Ghee Pongal"
-                                                class="food-item food-2">
-                                            <img src="images/index/Masala-Vada.webp" alt="Masala Vada"
-                                                class="food-item food-3">
-                                            <img src="images/index/Medhu-Vada.webp" alt="Medhu Vada"
-                                                class="food-item food-4">
-                                            <img src="images/index/Mysore-Bonda.webp" alt="Mysore Bonda"
-                                                class="food-item food-5">
-                                            <img src="images/index/Onion-Medhu-Vada.webp" alt="Onion Medhu Vada"
-                                                class="food-item food-6">
-                                            <img src="images/index/Pani-Poori.webp" alt="Pani Poori"
-                                                class="food-item food-7">
-                                            <img src="images/index/Podi-Idly.webp" alt="Podi Idly"
-                                                class="food-item food-8">
-                                            <img src="images/index/Poori.webp" alt="Poori" class="food-item food-9">
-                                            <img src="images/index/Samosa.webp" alt="Samosa" class="food-item food-10">
+                                <div class="hero-food-display">
+                                    <!-- Main Banner Image -->
+                                    <div class="main-food-image">
+                                        <img src="images/Dosaiweb/669783c84bec6d83869ed3e8_New Banner Image (1).png" alt="Delicious Food" class="food-banner-img">
+                                    </div>
+                                    
+                                    <!-- Floating Food Items -->
+                                    <div class="floating-food-items">
+                                        <!-- Masala Dosa Badge -->
+                                        <div class="food-badge food-badge-1">
+                                            <img src="images/index/Ghee-Dos.webp" alt="Masala Dosa">
+                                            <div class="badge-info">
+                                                <span class="food-name">Masala Dosa</span>
+                                                <div class="rating">
+                                                    <span>⭐⭐⭐⭐⭐</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Happy Customer Badge -->
+                                        <div class="customer-badge">
+                                            <span class="emoji">😄</span>
+                                            <div class="customer-info">
+                                                <span class="customer-title">Our Happy Customer</span>
+                                                <div class="customer-rating">
+                                                    <span>⭐ 4.8</span>
+                                                    <span class="review-count">(12.5k Reviews)</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -224,6 +193,64 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Start Mixture Products Section -->
+                <section class="mixture-section">
+                    <div class="container">
+                        <div class="mixture-header">
+                            <h2 class="mixture-title">Mixture</h2>
+                            <a href="#shop" class="btn-shop-now">Shop Now</a>
+                        </div>
+                        
+                        <div class="mixture-products-slider">
+                            <!-- Product 1 -->
+                            <div class="mixture-product-card">
+                                <div class="product-image-wrapper">
+                                    <img src="images\Mixture\mixture-1.jpg" alt="Classic Kara Boondhi" class="product-image">
+                                </div>
+                                <h3 class="product-name">Classic Kara Boondhi</h3>
+                                <p class="product-price">Rs. 230.00</p>
+                            </div>
+                            
+                            <!-- Product 2 -->
+                            <div class="mixture-product-card">
+                                <div class="product-image-wrapper">
+                                    <img src="images\Mixture\mixture-2.jpg" alt="Madras Mixture" class="product-image">
+                                </div>
+                                <h3 class="product-name">Madras Mixture</h3>
+                                <p class="product-price">From Rs. 210.00</p>
+                            </div>
+                            
+                            <!-- Product 3 -->
+                            <div class="mixture-product-card">
+                                <div class="product-image-wrapper">
+                                    <img src="images\Mixture\mixture-3.jpg" alt="Aval Mixture" class="product-image">
+                                </div>
+                                <h3 class="product-name">Aval Mixture</h3>
+                                <p class="product-price">From Rs. 200.00</p>
+                            </div>
+                            
+                            <!-- Product 4 -->
+                            <div class="mixture-product-card">
+                                <div class="product-image-wrapper">
+                                    <img src="images\Mixture\mixture-1.jpg" alt="Special Mixture" class="product-image">
+                                </div>
+                                <h3 class="product-name">Special Mixture</h3>
+                                <p class="product-price">From Rs. 230.00</p>
+                            </div>
+                            
+                            <!-- Product 5 (if needed) -->
+                            <div class="mixture-product-card">
+                                <div class="product-image-wrapper">
+                                    <img src="images\Mixture\mixture-3.jpg" alt="Premium Mixture" class="product-image">
+                                </div>
+                                <h3 class="product-name">Premium Mixture</h3>
+                                <p class="product-price">From Rs. 250.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Mixture Products Section -->
 
                 <!-- Start Welcome Part -->
                 <section id="reach-to" class="welcome-part home-icon">
@@ -1116,6 +1143,159 @@
                 }
             } catch (err) { console.warn('sig-nav init failed', err); }
         })();
+    </script>
+    
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-nav-menu');
+            
+            if (mobileToggle && mobileMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    
+                    // Animate hamburger icon
+                    const spans = mobileToggle.querySelectorAll('span');
+                    if (mobileMenu.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('active');
+                        const spans = mobileToggle.querySelectorAll('span');
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    });
+                });
+            }
+        });
+    </script>
+    
+    <!-- Mixture Products Auto-Scroll Script -->
+    <script>
+        // Auto-scroll functionality for mixture products with drag support
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.mixture-products-slider');
+            
+            if (slider) {
+                let scrollAmount = 0;
+                let scrollDirection = 1; // 1 for right, -1 for left
+                let scrollSpeed = 1; // pixels per frame
+                let isAutoScrolling = true;
+                let isDragging = false;
+                let startX;
+                let scrollLeft;
+                
+                function autoScroll() {
+                    if (!slider || !isAutoScrolling) return;
+                    
+                    // Get max scroll position
+                    const maxScroll = slider.scrollWidth - slider.clientWidth;
+                    
+                    // Auto scroll
+                    scrollAmount += scrollSpeed * scrollDirection;
+                    slider.scrollLeft = scrollAmount;
+                    
+                    // Change direction when reaching end
+                    if (scrollAmount >= maxScroll) {
+                        scrollDirection = -1;
+                    } else if (scrollAmount <= 0) {
+                        scrollDirection = 1;
+                    }
+                    
+                    requestAnimationFrame(autoScroll);
+                }
+                
+                // Start auto-scroll
+                autoScroll();
+                
+                // Pause on hover
+                slider.addEventListener('mouseenter', function() {
+                    isAutoScrolling = false;
+                });
+                
+                slider.addEventListener('mouseleave', function() {
+                    if (!isDragging) {
+                        scrollAmount = slider.scrollLeft;
+                        isAutoScrolling = true;
+                        autoScroll();
+                    }
+                });
+                
+                // Mouse drag functionality
+                slider.addEventListener('mousedown', function(e) {
+                    isDragging = true;
+                    isAutoScrolling = false;
+                    slider.style.cursor = 'grabbing';
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+                
+                slider.addEventListener('mousemove', function(e) {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2; // Scroll speed multiplier
+                    slider.scrollLeft = scrollLeft - walk;
+                    scrollAmount = slider.scrollLeft;
+                });
+                
+                slider.addEventListener('mouseup', function() {
+                    isDragging = false;
+                    slider.style.cursor = 'grab';
+                });
+                
+                slider.addEventListener('mouseleave', function() {
+                    if (isDragging) {
+                        isDragging = false;
+                        slider.style.cursor = 'grab';
+                    }
+                });
+                
+                // Touch/swipe functionality for mobile
+                let touchStartX = 0;
+                let touchScrollLeft = 0;
+                
+                slider.addEventListener('touchstart', function(e) {
+                    isAutoScrolling = false;
+                    touchStartX = e.touches[0].pageX;
+                    touchScrollLeft = slider.scrollLeft;
+                }, { passive: true });
+                
+                slider.addEventListener('touchmove', function(e) {
+                    const touchX = e.touches[0].pageX;
+                    const walk = (touchStartX - touchX) * 1.5; // Swipe speed
+                    slider.scrollLeft = touchScrollLeft + walk;
+                    scrollAmount = slider.scrollLeft;
+                }, { passive: true });
+                
+                slider.addEventListener('touchend', function() {
+                    setTimeout(function() {
+                        scrollAmount = slider.scrollLeft;
+                        isAutoScrolling = true;
+                        autoScroll();
+                    }, 2000); // Resume auto-scroll after 2 seconds
+                });
+                
+                // Set initial cursor
+                slider.style.cursor = 'grab';
+            }
+        });
+    </script>
+        });
     </script>
 </body>
 

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Balaji Dosai</title>
+    <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="plugin/bootstrap/datepicker.css" rel="stylesheet">
+    <link href="plugin/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="plugin/form-field/jquery.formstyler.css" rel="stylesheet">
+    <link href="plugin/revolution-plugin/extralayers.css" rel="stylesheet">
+    <link href="plugin/revolution-plugin/settings.css" rel="stylesheet">
+    <link href="plugin/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugin/owl-carousel/owl.theme.default.css" rel="stylesheet">
+    <link href="plugin/slick-slider/slick-theme.css" rel="stylesheet">
+    <link href="plugin/magnific/magnific-popup.css" rel="stylesheet">
+    <link href="plugin/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="plugin/animation/animate.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        /*
+        .tp-banner ul{
+            position: relative;
+        }
+        .tp-banner ul li{
+            z-index: 11;
+            position: relative;
+        }
+        .tp-banner ul li::before{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            content: '';
+            left: 0%;
+            top: 0%;
+            background-color: black;
+            opacity: 0.8;
+            z-index: 10;
+        }
+        */
+
+        .col-sm-6.col-md-4.col-lg-3 {
+            margin-bottom: 10px;
+            padding: 0px 5px;
+        }
+
+        /* Gallery item caption */
+        .gallery-caption {
+            text-align: center;
+            padding: 12px 8px 24px;
+            font-family: 'Quicksand', Arial, sans-serif;
+            color: #333;
+        }
+
+        .gallery-caption .item-name {
+            margin: 0 0 6px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+        }
+
+        .gallery-caption .item-price {
+            margin: 0 0 6px;
+            color: #0a7a4a;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            background: rgba(10, 122, 74, 0.08);
+            padding: 6px 10px;
+            border-radius: 18px;
+        }
+
+        .gallery-caption .item-discount {
+            margin-left: 8px;
+            color: #fff;
+            background: #d9534f;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .gallery-caption .item-details {
+            margin: 8px 0 0;
+            color: #666;
+            font-size: 13px;
+            font-style: italic;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Start Header -->
+        <header>
+            <div id="nav" class="header-part header-reduce sticky">
+                <div class="header-top">
+                    <div class="" style="padding: 0px 20px;">
+                        <div class="header-top-inner">
+                            <div class="header-top-left">
+                                <a href="#" class="top-cell">
+                                    <!-- <img src="images/fon.png" alt=""> -->
+                                    <span>Hotline: 0812 224 593</span>
+                                </a>
+                                <!-- <a href="#" class="top-email"><span>support@balajidosai.lk</span></a> -->
+                            </div>
+                            <!-- <div class="header-top-right">
+                                <div class="social-top">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/BalajiDosai"><i class="bi bi-facebook"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="language-menu" style="display: none;">
+                                    <a href="#" class="current-lang">English <i class="fa fa-caret-down"
+                                            aria-hidden="true"></i></a>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Turkish</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i>Nederlands</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Français</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Deutsch</a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Italiano</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="" style="padding: 0px 20px;">
+                        <div class="header-info" style="padding: 0px; display: flex; justify-content: end;">
+                            <div class="w-100">
+                                <div class="menu-main w-100"
+                                    style="width: 100% !important; padding: 0px !important; margin: 0px !important;">
+                                    <ul style="padding: 0px !important; margin: 0px !important;">
+                                        <li>
+                                            <a href="services.html">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-icon">
+                            <a href="#" class="hambarger">
+                                <span class="bar-1"></span>
+                                <span class="bar-2"></span>
+                                <span class="bar-3"></span>
+                            </a>
+                        </div>
+                        <!--
+                        <div class="book-table header-collect book-sm">
+                            <a href="#" data-toggle="modal" data-target="#booktable"><img src="images/icon-table.png"
+                                    alt="">Book a Table</a>
+                        </div>
+                        -->
+                        <div class="menu-main">
+                            <ul class="list-style-none">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="specialties.html">Specialties</a>
+                                </li>
+                                <li class="hidden-on-min-992">
+                                    <a href="services.html">Services</a>
+                                </li>
+                                <li class="hidden-on-min-992">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="hidden-on-min-992">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start Main -->
+        <main>
+            <div class="main-part">
+                <!-- Start Breadcrumb Part -->
+                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5"
+                    style="background-image: url('images/breadbg1.jpg');">
+                    <div class="container">
+                        <div class="breadcrumb-inner">
+                            <h2>Specialties</h2>
+                            <a href="index.html">Home</a>
+                            <span>Specialties</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Breadcrumb Part -->
+                <section class="home-icon">
+                    <div class="icon-default">
+                        <img src="images/scroll-arrow.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="gallery-royal">
+                            <div class="galleryportfolio" style="margin-bottom: 30px;">
+                                <div class="portfolioFilter-inner bg-skeen">
+                                    <a href="javascript:;" data-filter="*" class="current">ALL</a>
+                                    <a href="javascript:;" data-filter=".ghee-dos">Ghee Dos</a>
+                                    <a href="javascript:;" data-filter=".ghee-pongal">Ghee Pongal</a>
+                                    <a href="javascript:;" data-filter=".masala-vada">Masala Vada</a>
+                                    <a href="javascript:;" data-filter=".medhu-vada">Medhu Vada</a>
+                                    <a href="javascript:;" data-filter=".mysore-bonda">Mysore Bonda</a>
+                                    <a href="javascript:;" data-filter=".onion-medhu-vada">Onion Medhu Vada</a>
+                                    <a href="javascript:;" data-filter=".pani-poori">Pani Poori</a>
+                                    <a href="javascript:;" data-filter=".podi-idly">Podi Idly</a>
+                                    <a href="javascript:;" data-filter=".poori">Poori</a>
+                                    <a href="javascript:;" data-filter=".samosa">Samosa</a>
+                                    <a href="javascript:;" data-filter=".string-hoppers">String Hoppers</a>
+                                    <a href="javascript:;" data-filter=".coco-roti">Coco Roti</a>
+                                    <a href="javascript:;" data-filter=".coco-sambol">Coco Sambol</a>
+                                    <a href="javascript:;" data-filter=".egg-hoppers">Egg Hoppers</a>
+                                    <a href="javascript:;" data-filter=".halapa">Halapa</a>
+                                    <a href="javascript:;" data-filter=".hoppers">Hoppers</a>
+                                    <a href="javascript:;" data-filter=".kottu">Kottu</a>
+                                    <a href="javascript:;" data-filter=".milk-rice">Milk Rice</a>
+                                    <a href="javascript:;" data-filter=".pittu">Pittu</a>
+                                    <a href="javascript:;" data-filter=".rice-curry">Rice & Curry</a>
+                                </div>
+                            </div>
+                            <div class="row gallery-filter">
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian ghee-dos"
+                                    data-price="420" data-discount="10"
+                                    data-details="Crispy ghee dosai served with chutneys" data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Ghee-Dos.webp" class="magnific-popup">
+                                            <img src="images/index/Ghee-Dos.webp" alt="Ghee Dosai">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Ghee Dosai</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian ghee-pongal"
+                                    data-price="380" data-discount="5"
+                                    data-details="Creamy ghee pongal tempered with black pepper and ghee"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Ghee-Pongal.webp" class="magnific-popup">
+                                            <img src="images/index/Ghee-Pongal.webp" alt="Ghee Pongal">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Ghee Pongal</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian masala-vada"
+                                    data-price="120" data-discount=""
+                                    data-details="Crispy lentil fritters flavoured with spices" data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Masala-Vada.webp" class="magnific-popup">
+                                            <img src="images/index/Masala-Vada.webp" alt="Masala Vada">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Masala Vada</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian medhu-vada"
+                                    data-price="140" data-discount=""
+                                    data-details="Soft and fluffy medhu vadas served hot" data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Medhu-Vada.webp" class="magnific-popup">
+                                            <img src="images/index/Medhu-Vada.webp" alt="Medhu Vada">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Medhu Vada</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian mysore-bonda"
+                                    data-price="160" data-discount="15"
+                                    data-details="Spicy Mysore bonda with a crisp exterior and soft interior"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Mysore-Bonda.webp" class="magnific-popup">
+                                            <img src="images/index/Mysore-Bonda.webp" alt="Mysore Bonda">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Mysore Bonda</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian onion-medhu-vada"
+                                    data-price="150" data-discount=""
+                                    data-details="Medhu vada mixed with fresh onions and curry leaves"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Onion-Medhu-Vada.webp" class="magnific-popup">
+                                            <img src="images/index/Onion-Medhu-Vada.webp" alt="Onion Medhu Vada">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Onion Medhu Vada</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian pani-poori"
+                                    data-price="200" data-discount=""
+                                    data-details="Crisp pani-puri served with tangy tamarind water" data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Pani-Poori.webp" class="magnific-popup">
+                                            <img src="images/index/Pani-Poori.webp" alt="Pani Poori">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Pani Poori</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian podi-idly"
+                                    data-price="220" data-discount="" data-details="Soft idlies tossed in aromatic podi"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Podi-Idly.webp" class="magnific-popup">
+                                            <img src="images/index/Podi-Idly.webp" alt="Podi Idly">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Podi Idly</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian poori"
+                                    data-price="180" data-discount="5"
+                                    data-details="Golden poori served with potato curry" data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Poori.webp" class="magnific-popup">
+                                            <img src="images/index/Poori.webp" alt="Poori">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Poori</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian samosa"
+                                    data-price="80" data-discount=""
+                                    data-details="Crispy samosa stuffed with spiced potatoes and peas"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Samosa.webp" class="magnific-popup">
+                                            <img src="images/index/Samosa.webp" alt="Samosa">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Samosa</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian samosa"
+                                    data-price="80" data-discount=""
+                                    data-details="Crispy samosa stuffed with spiced potatoes and peas"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Samosa.webp" class="magnific-popup">
+                                            <img src="images/index/Samosa.webp" alt="Samosa">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Samosa</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian samosa"
+                                    data-price="80" data-discount=""
+                                    data-details="Crispy samosa stuffed with spiced potatoes and peas"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/index/Samosa.webp" class="magnific-popup">
+                                            <img src="images/index/Samosa.webp" alt="Samosa">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Samosa</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian string-hoppers"
+                                    data-price="250" data-discount=""
+                                    data-details="Traditional string hoppers served with curry"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/string-hoppers.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/string-hoppers.jpg" alt="String Hoppers">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>String Hoppers</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian coco-roti"
+                                    data-price="180" data-discount=""
+                                    data-details="Soft coconut roti with fresh coconut"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/coco-roti.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/coco-roti.jpg" alt="Coco Roti">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Coco Roti</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian coco-sambol"
+                                    data-price="100" data-discount=""
+                                    data-details="Fresh coconut sambol with chili and spices"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/coco-sambol.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/coco-sambol.jpg" alt="Coco Sambol">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Coco Sambol</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian egg-hoppers"
+                                    data-price="280" data-discount="8"
+                                    data-details="Crispy hoppers with egg cooked in the center"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/egg-hoppers.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/egg-hoppers.jpg" alt="Egg Hoppers">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Egg Hoppers</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian halapa"
+                                    data-price="150" data-discount=""
+                                    data-details="Sweet coconut filling wrapped in rice flour"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/halapa.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/halapa.jpg" alt="Halapa">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Halapa</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian hoppers"
+                                    data-price="240" data-discount=""
+                                    data-details="Traditional hoppers with crispy edges"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/hoppers.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/hoppers.jpg" alt="Hoppers">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Hoppers</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian kottu"
+                                    data-price="320" data-discount="10"
+                                    data-details="Chopped roti with vegetables and spices"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/kottu.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/kottu.jpg" alt="Kottu">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Kottu</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian milk-rice"
+                                    data-price="200" data-discount=""
+                                    data-details="Creamy milk rice with traditional accompaniments"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/milk-rice.jpg" class="magnific-popup">
+                                            <img src="images/food-cards/milk-rice.jpg" alt="Milk Rice">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Milk Rice</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian pittu"
+                                    data-price="220" data-discount="5"
+                                    data-details="Steamed rice flour with fresh coconut"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/pittu.jpeg" class="magnific-popup">
+                                            <img src="images/food-cards/pittu.jpeg" alt="Pittu">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Pittu</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--image card-->
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 isotope-item vegetarian rice-curry"
+                                    data-price="350" data-discount=""
+                                    data-details="Traditional rice served with variety of curries"
+                                    data-currency="LKR">
+                                    <div class="gallery-megic-blog">
+                                        <a href="images/food-cards/rice-curry.webp" class="magnific-popup">
+                                            <img src="images/food-cards/rice-curry.webp" alt="Rice & Curry">
+                                            <div class="gallery-megic-inner hidden">
+                                                <div class="gallery-megic-out">
+                                                    <div class="gallery-megic-detail">
+                                                        <h2>Rice & Curry</h2>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- End Main -->
+
+        <!-- Start Footer -->
+        <footer>
+            <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="icon-default icon-dark">
+                    <img src="images/logo.png" alt="" style="width: 75px;">
+                </div>
+                <div class="container">
+                    <div class="footer-inner">
+                        <div class="footer-info">
+                            <h3>Balaji Dosai Restaurant</h3>
+                            <p class="font-futura">03, D.S. Senanayaka street, Kandy, Sri Lanka</p>
+                            <p><a href="#" class="font-futura">0812 224 593</a></p>
+                            <p><a href="#" class="font-futura">support@balajidosai.lk</a></p>
+                            <div class="social-round" style="margin-top: 10px;">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/BalajiDosai">
+                                            <i class="bi bi-facebook"></i>
+                                        </a></li>
+                                    <li style="margin: 0;"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy-right">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 copyright-before text-center">
+                                2025 © All Rights Reserved | Balaji Dosai | Designed & Developed by Silicon Radon
+                                Networks (Pvt) Ltd.
+                            </div>
+                            <!-- <div class="col-md-2 col-sm-2 col-xs-12 copyright-after">
+                                <div class="social-round">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/BalajiDosai">
+                                                <i class="bi bi-facebook"></i>
+                                            </a></li>
+                                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!--map (hidden)-->
+                <div class="icon-find" style="display: none;">
+                    <a href="#">
+                        <img src="images/location.png" alt="">
+                        <span>Find us on Map</span>
+                    </a>
+                </div>
+                <div class="location-footer-map" style="display: none;">
+                    <div class="icon-find-location">
+                        <a href="#">
+                            <img src="images/location.png" alt="">
+                            <span>Find us on Map</span>
+                        </a>
+                    </div>
+                    <div class="footer-map-outer">
+                        <div id="footer-map"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+    <!-- Back To Top Arrow -->
+    <a href="#" class="top-arrow"></a>
+    <!--Messenger and WhatsApp Floating btns-->
+    <a href="#" class="float" style="z-index: 999999;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-messenger my-float" viewBox="0 0 16 16">
+            <path
+                d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+        </svg>
+    </a>
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script>
+        var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "#", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+        window.onload = () => {
+            _waEmbed(wa_btnSetting);
+        };
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="plugin/bootstrap/bootstrap.min.js"></script>
+    <script src="plugin/bootstrap/bootstrap-datepicker.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf6My1Jfdi1Fmj-DUmX_CcNOZ6FLkQ4Os"></script>
+    <script src="plugin/form-field/jquery.formstyler.min.js"></script>
+    <script src="plugin/revolution-plugin/jquery.themepunch.plugins.min.js"></script>
+    <script src="plugin/revolution-plugin/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugin/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugin/slick-slider/slick.min.js"></script>
+    <script src="plugin/isotop/isotop.js"></script>
+    <script src="plugin/isotop/packery-mode.pkgd.min.js"></script>
+    <script src="plugin/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="plugin/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="plugin/animation/wow.min.js"></script>
+    <script src="plugin/parallax/jquery.stellar.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        // initialize slick slider for signature grid when DOM is ready
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.slick !== 'undefined') {
+                    jQuery(document).ready(function ($) {
+                        $('.signature-grid').each(function () {
+                            var $grid = $(this);
+                            // avoid double-init
+                            if ($grid.hasClass('slick-initialized')) return;
+                            var itemCount = $grid.find('.sig-item').length || 1;
+                            $grid.slick({
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                arrows: true,
+                                dots: false,
+                                infinite: true,
+                                autoplay: true,
+                                autoplaySpeed: 3000,
+                                pauseOnHover: true,
+                                speed: 600,
+                                responsive: [
+                                    { breakpoint: 1200, settings: { slidesToShow: 4 } },
+                                    { breakpoint: 992, settings: { slidesToShow: 3 } },
+                                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                                    { breakpoint: 480, settings: { slidesToShow: 1 } }
+                                ]
+                            });
+                        });
+                    });
+                }
+            } catch (e) { console.warn('Slick init failed', e); }
+        })();
+    </script>
+    <script>
+        // manual tap zones for signature grid navigation
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(function ($) {
+                        // Handle visible arrow buttons
+                        $('.sig-arrow-left').on('click', function (e) {
+                            e.preventDefault();
+                            $(this).closest('.signature-dishes').find('.signature-grid').slick('slickPrev');
+                        });
+                        $('.sig-arrow-right').on('click', function (e) {
+                            e.preventDefault();
+                            $(this).closest('.signature-dishes').find('.signature-grid').slick('slickNext');
+                        });
+
+                        // Handle invisible tap zones (if they exist)
+                        var $left = $('.sig-nav-left');
+                        var $right = $('.sig-nav-right');
+                        $left.on('click touchstart', function (e) {
+                            e.preventDefault();
+                            $('.signature-grid').slick && $('.signature-grid').slick('slickPrev');
+                        });
+                        $right.on('click touchstart', function (e) {
+                            e.preventDefault();
+                            $('.signature-grid').slick && $('.signature-grid').slick('slickNext');
+                        });
+                    });
+                }
+            } catch (err) { console.warn('sig-nav init failed', err); }
+        })();
+    </script>
+    <script>
+        // Gallery pagination with filter integration
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(function ($) {
+                        var $allItems = $('.gallery-filter .isotope-item');
+                        var $visibleItems = $allItems;
+                        var perPage = 50;
+                        var currentPage = 1;
+                        var $pager = $('.gallery-pagination ul');
+                        var $filterButtons = $('.portfolioFilter-inner a');
+
+                        function buildPager(itemCount) {
+                            if (!$pager.length) return;
+                            var totalPages = Math.max(1, Math.ceil(itemCount / perPage));
+                            var html = '';
+                            html += '<li><a href="#" class="pagination-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> <span>PREV</span></a></li>';
+                            for (var i = 1; i <= totalPages; i++) {
+                                html += '<li' + (i === currentPage ? ' class="active"' : '') + '><a href="#" data-page="' + i + '"><span>' + i + '</span></a></li>';
+                            }
+                            html += '<li><a href="#" class="pagination-next"><span>NEXT</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>';
+                            $pager.html(html);
+
+                            // Show/hide pagination based on item count
+                            if (itemCount <= perPage) {
+                                $('.gallery-pagination').hide();
+                            } else {
+                                $('.gallery-pagination').show();
+                            }
+                        }
+
+                        function showPage(page) {
+                            var totalPages = Math.max(1, Math.ceil($visibleItems.length / perPage));
+                            if (page < 1) page = 1;
+                            if (page > totalPages) page = totalPages;
+                            currentPage = page;
+
+                            // Hide all items first
+                            $allItems.hide();
+                            
+                            // Show only the visible items for this page
+                            $visibleItems.slice((page - 1) * perPage, page * perPage).show();
+                            
+                            // Update active state
+                            $pager.find('li').removeClass('active');
+                            $pager.find('a[data-page="' + page + '"]').parent().addClass('active');
+
+                            // Scroll to top of gallery
+                            $('html, body').animate({
+                                scrollTop: $('.gallery-filter').offset().top - 100
+                            }, 300);
+                        }
+
+                        // Filter button click handler
+                        $filterButtons.on('click', function (e) {
+                            e.preventDefault();
+                            var $btn = $(this);
+                            var filter = $btn.data('filter');
+
+                            // Update active filter button
+                            $filterButtons.removeClass('current');
+                            $btn.addClass('current');
+
+                            // Filter items
+                            if (filter === '*') {
+                                $visibleItems = $allItems;
+                            } else {
+                                $visibleItems = $allItems.filter(filter);
+                            }
+
+                            // Reset to page 1 and rebuild pagination
+                            currentPage = 1;
+                            buildPager($visibleItems.length);
+                            showPage(1);
+                        });
+
+                        // Pagination click handlers
+                        $pager.on('click', 'a', function (e) {
+                            e.preventDefault();
+                            var $a = $(this);
+                            
+                            if ($a.hasClass('pagination-prev')) {
+                                showPage(currentPage - 1);
+                            } else if ($a.hasClass('pagination-next')) {
+                                showPage(currentPage + 1);
+                            } else {
+                                var page = parseInt($a.data('page'), 10);
+                                if (!isNaN(page)) {
+                                    showPage(page);
+                                }
+                            }
+                        });
+
+                        // Initialize
+                        buildPager($allItems.length);
+                        showPage(1);
+                    });
+                }
+            } catch (e) { 
+                console.error('Gallery pagination init failed', e); 
+            }
+        })();
+    </script>
+    <script>
+        // Append captions under each gallery item using image alt and optional data-* attributes
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(function ($) {
+                        $('.gallery-filter .gallery-megic-blog').each(function () {
+                            var $blog = $(this);
+                            var $img = $blog.find('img').first();
+                            var name = $img.attr('alt') || 'Item';
+                            // allow overrides via parent data attributes
+                            var $parent = $blog.closest('.isotope-item');
+                            var price = $parent.data('price') || $parent.attr('data-price') || '';
+                            var discount = $parent.data('discount') || $parent.attr('data-discount') || '';
+                            var details = $parent.data('details') || $parent.attr('data-details') || '';
+                            var currency = $parent.data('currency') || $parent.attr('data-currency') || 'LKR';
+
+                            var priceHtml = price ? '<div class="item-price">' + currency + ' ' + price + (discount ? '<span class="item-discount"> (' + discount + '% OFF)</span>' : '') + '</div>' : '';
+                            var detailsHtml = details ? '<div class="item-details">' + details + '</div>' : '';
+
+                            var $cap = $('<div class="gallery-caption"/>');
+                            $cap.append('<h3 class="item-name">' + name + '</h3>');
+                            $cap.append(priceHtml);
+                            $cap.append(detailsHtml);
+
+                            // Insert caption after the blog block
+                            $blog.after($cap);
+                        });
+                    });
+                }
+            } catch (e) { console.warn('Gallery caption init failed', e); }
+        })();
+    </script>
+</body>
+
+</html>
