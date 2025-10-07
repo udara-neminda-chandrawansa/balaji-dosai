@@ -3320,6 +3320,7 @@ textarea.form-control {
    ============================================ */
 
 .tradition-banner-section {
+
     position: relative;
     min-height: 500px;
     display: flex;
@@ -3339,6 +3340,7 @@ textarea.form-control {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
+    
 }
 
 .banner-overlay {

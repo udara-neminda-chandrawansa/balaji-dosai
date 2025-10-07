@@ -993,6 +993,40 @@
             } catch (e) { console.warn('Gallery caption init failed', e); }
         })();
     </script>
+    
+    <!-- Cart Dropdown Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartBtn = document.querySelector('.btn-cart');
+            const cartDropdown = document.querySelector('.cart-dropdown .dropdown-menu');
+            
+            if (cartBtn && cartDropdown) {
+                cartBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle dropdown visibility
+                    if (cartDropdown.classList.contains('show')) {
+                        cartDropdown.classList.remove('show');
+                    } else {
+                        cartDropdown.classList.add('show');
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!cartBtn.contains(e.target) && !cartDropdown.contains(e.target)) {
+                        cartDropdown.classList.remove('show');
+                    }
+                });
+                
+                // Prevent dropdown from closing when clicking inside it
+                cartDropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
