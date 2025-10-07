@@ -144,106 +144,97 @@
     </div>
     <div class="wrapper">
         <!-- Start Header -->
-        <header>
-            <div id="nav" class="header-part header-reduce sticky">
-                <div class="header-top">
-                    <div class="" style="padding: 0px 20px;">
-                        <div class="header-top-inner">
-                            <div class="header-top-left">
-                                <a href="#" class="top-cell">
-                                    <!-- <img src="images/fon.png" alt=""> -->
-                                    <span>Hotline: 0812 224 593</span>
-                                </a>
-                                <!-- <a href="#" class="top-email"><span>support@balajidosai.lk</span></a> -->
-                            </div>
-                            <!-- <div class="header-top-right">
-                                <div class="social-top">
-                                    <ul>
-                                        <li><a href="https://www.facebook.com/BalajiDosai"><i class="bi bi-facebook"
-                                                    aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="language-menu" style="display: none;">
-                                    <a href="#" class="current-lang">English <i class="fa fa-caret-down"
-                                            aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Turkish</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right"
-                                                    aria-hidden="true"></i>Nederlands</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Français</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Deutsch</a>
-                                        </li>
-                                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Italiano</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom">
-                    <div class="" style="padding: 0px 20px;">
-                        <div class="header-info" style="padding: 0px; display: flex; justify-content: end;">
-                            <div class="w-100">
-                                <div class="menu-main w-100"
-                                    style="width: 100% !important; padding: 0px !important; margin: 0px !important;">
-                                    <ul style="padding: 0px !important; margin: 0px !important;">
-                                        <li>
-                                            <a href="services.html">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="gallery.html">Gallery</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contact Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-icon">
-                            <a href="#" class="hambarger">
-                                <span class="bar-1"></span>
-                                <span class="bar-2"></span>
-                                <span class="bar-3"></span>
+               <header class="modern-header">
+            <nav class="navbar-modern">
+                <div class="container-fluid">
+                    <div class="nav-wrapper">
+                        <!-- Left Side - Logo -->
+                        <div class="nav-logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Dosa Coffee" class="logo-image">
                             </a>
                         </div>
-                        <!--
-                        <div class="book-table header-collect book-sm">
-                            <a href="#" data-toggle="modal" data-target="#booktable"><img src="images/icon-table.png"
-                                    alt="">Book a Table</a>
-                        </div>
-                        -->
-                        <div class="menu-main">
-                            <ul class="list-style-none">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="specialties.html">Specialties</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="services.html">Services</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="gallery.html">Gallery</a>
-                                </li>
-                                <li class="hidden-on-min-992">
-                                    <a href="contact.html">Contact Us</a>
-                                </li>
+                        
+                        <!-- Center - Navigation Menu -->
+                        <div class="nav-menu">
+                            <ul class="nav-links">
+                                <li><a href="index.html" class="nav-link ">Home</a></li>
+                                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                                <li><a href="specialties.html" class="nav-link">Specialties</a></li>
+                                <li><a href="services.html" class="nav-link">Services</a></li>
+                                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        
+                        <!-- Right Side - Login Button -->
+                        <div class="nav-actions">
+                            <a href="#login" class="btn-login">Login</a>
+                            
+                            <!-- Cart Dropdown -->
+                            <div class="cart-dropdown">
+                                <a class="btn-cart position-relative" href="#" role="button">
+                                    <i class="bi bi-cart"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        2
+                                    </span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 350px;">
+                                    <!-- Cart Items -->
+                                    <li class="d-flex align-items-center mb-2">
+                                        <img src="images\Mixture\mixture-1.jpg" class="me-2 rounded nav-prod-img" alt="Classic Kara Boondhi">
+                                        <div class="flex-grow-1">
+                                            <div>Classic Kara Boondhi</div>
+                                            <small class="text-muted">Qty: 2 × Rs. 230.00</small>
+                                        </div>
+                                        <div class="fw-bold">Rs. 460.00</div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                        <img src="images\Mixture\mixture-2.jpg" class="me-2 rounded nav-prod-img" alt="Madras Mixture">
+                                        <div class="flex-grow-1">
+                                            <div>Madras Mixture</div>
+                                            <small class="text-muted">Qty: 1 × Rs. 210.00</small>
+                                        </div>
+                                        <div class="fw-bold">Rs. 210.00</div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <!-- Buttons -->
+                                    <li class="d-grid gap-2">
+                                        <a href="#cart" class="btn btn-primary btn-cart-view">Go to Cart</a>
+                                        <a href="#checkout" class="btn btn-primary btn-cart-checkout">Checkout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Mobile Menu Toggle -->
+                            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
                     </div>
                 </div>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-nav-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="about.html" class="mobile-nav-link ">About Us</a></li>
+                    <li><a href="specialties.html" class="mobile-nav-link">Specialties</a></li>
+                    <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+                    <li><a href="#login" class="mobile-nav-link">Login</a></li>
+                </ul>
             </div>
         </header>
         <!-- End Header -->
