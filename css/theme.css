@@ -3551,6 +3551,7 @@ textarea {
 ------------------------------------------------------------------*/
 
 .footer-part {
+  margin-top: 0px;
   float: left;
   width: 100%;
   background: #000;
@@ -4662,8 +4663,8 @@ textarea {
 ------------------------------------------------------------------*/
 
 .breadcrumb-part {
-  padding: 0px;
-  height: 345px;
+  margin-top: 80px;
+  height: 445px;
 }
 
 .breadcrumb-inner {
@@ -6880,6 +6881,7 @@ table.shop-cart-table .shop-cart-close {
 }
 
 .contact-map {
+  margin-top: 83px;
   padding: 0px;
 }
 
