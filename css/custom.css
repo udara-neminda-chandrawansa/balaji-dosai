@@ -630,6 +630,44 @@
     color: var(--dark-green);
 }
 
+/*cart list updates (by udara*/
+.cart-list-item{
+    /* d-flex align-items-center flex-direction-column mb-2 */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .cart-list-item{
+        flex-direction: column;
+        div{
+            width: 100%;
+        }
+        img{
+            margin-bottom: 10px;
+        }
+        .fw-bold{
+            padding: 0px 10px;
+        }
+    }
+}
+
+.my-cart-menu{
+    min-width: 350px;
+}
+
+@media (max-width: 375px) {
+    .my-cart-menu{
+        min-width: 300px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav-wrapper {

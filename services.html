@@ -76,10 +76,10 @@
                         <!-- Center - Navigation Menu -->
                         <div class="nav-menu">
                             <ul class="nav-links">
-                                <li><a href="index.html" class="nav-link ">Home</a></li>
+                                <li><a href="index.html" class="nav-link active">Home</a></li>
                                 <li><a href="about.html" class="nav-link">About Us</a></li>
                                 <li><a href="specialties.html" class="nav-link">Specialties</a></li>
-                                <li><a href="services.html" class="nav-link active">Services</a></li>
+                                <li><a href="services.html" class="nav-link">Services</a></li>
                                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                                 <li><a href="contact.html" class="nav-link">Contact Us</a></li>
                             </ul>
@@ -89,6 +89,13 @@
                         <div class="nav-actions">
                             <a href="#login" class="btn-login">Login</a>
                             
+                            <!-- Mobile Menu Toggle -->
+                            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
                             <!-- Cart Dropdown -->
                             <div class="cart-dropdown">
                                 <a class="btn-cart position-relative" href="#" role="button">
@@ -98,9 +105,9 @@
                                     </span>
                                 </a>
 
-                                <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 350px;">
+                                <ul class="dropdown-menu dropdown-menu-end p-3 my-cart-menu">
                                     <!-- Cart Items -->
-                                    <li class="d-flex align-items-center mb-2">
+                                    <li class="cart-list-item">
                                         <img src="images\Mixture\mixture-1.jpg" class="me-2 rounded nav-prod-img" alt="Classic Kara Boondhi">
                                         <div class="flex-grow-1">
                                             <div>Classic Kara Boondhi</div>
@@ -111,7 +118,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li class="d-flex align-items-center mb-2">
+                                    <li class="cart-list-item">
                                         <img src="images\Mixture\mixture-2.jpg" class="me-2 rounded nav-prod-img" alt="Madras Mixture">
                                         <div class="flex-grow-1">
                                             <div>Madras Mixture</div>
@@ -131,12 +138,7 @@
                                 </ul>
                             </div>
                             
-                            <!-- Mobile Menu Toggle -->
-                            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -513,40 +515,6 @@
                 }
             } catch (err) { console.warn('sig-nav init failed', err); }
         })();
-    </script>
-    
-    <!-- Cart Dropdown Toggle Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const cartBtn = document.querySelector('.btn-cart');
-            const cartDropdown = document.querySelector('.cart-dropdown .dropdown-menu');
-            
-            if (cartBtn && cartDropdown) {
-                cartBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Toggle dropdown visibility
-                    if (cartDropdown.classList.contains('show')) {
-                        cartDropdown.classList.remove('show');
-                    } else {
-                        cartDropdown.classList.add('show');
-                    }
-                });
-                
-                // Close dropdown when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!cartBtn.contains(e.target) && !cartDropdown.contains(e.target)) {
-                        cartDropdown.classList.remove('show');
-                    }
-                });
-                
-                // Prevent dropdown from closing when clicking inside it
-                cartDropdown.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
-            }
-        });
     </script>
 </body>
 

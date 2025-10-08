@@ -8,6 +8,74 @@
 // window.addEventListener('load', setNavHeight);
 // window.addEventListener('resize', setNavHeight);
 
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-nav-menu');
+    
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = mobileToggle.querySelectorAll('span');
+            if (mobileMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+        
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                const spans = mobileToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+    }
+});
+
+// cart menu logic
+document.addEventListener('DOMContentLoaded', function() {
+const cartBtn = document.querySelector('.btn-cart');
+const cartDropdown = document.querySelector('.cart-dropdown .dropdown-menu');
+
+if (cartBtn && cartDropdown) {
+    cartBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle dropdown visibility
+        if (cartDropdown.classList.contains('show')) {
+            cartDropdown.classList.remove('show');
+        } else {
+            cartDropdown.classList.add('show');
+        }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!cartBtn.contains(e.target) && !cartDropdown.contains(e.target)) {
+            cartDropdown.classList.remove('show');
+        }
+    });
+    
+    // Prevent dropdown from closing when clicking inside it
+    cartDropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+}
+});
+
 // ====================================
 // Menu Tab Functionality
 // ====================================
