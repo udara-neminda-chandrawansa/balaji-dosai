@@ -397,9 +397,110 @@
     transform: translateY(0);
 }
 
-.dropdown-menu li {
-    list-style: none;
+/* small list items in dropdown are handled by specific selectors below */
+
+/* Account table responsive styles (added for account pages) */
+.account__table {
+    width: 100%;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
+.account__table--header {
+    display: flex;
+    background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
+}
+.account__table--header__child--items {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 1rem;
+    font-size: 1.4rem;
+    flex: 1;
+}
+@media only screen and (min-width: 1200px) {
+    .account__table--header__child--items {
+        font-size: 1.6rem;
+        padding: 1.4rem 1.5rem;
+    }
+}
+/* Responsive helpers used by markup */
+.account__table--body {
+    display: block;
+}
+.account__table--body__child {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+}
+.account__table--body__child--items {
+    padding: 1rem 1.2rem;
+    color: var(--text-muted);
+    flex: 1;
+}
+.account__table--body__child--items:last-child {
+    text-align: right;
+}
+
+/* mobile layout */
+@media only screen and (max-width: 767px) {
+    .account__table--header { display: none; }
+    .account__table--body__child { flex-direction: column; align-items: stretch; padding: 0.6rem 0.8rem; }
+    .account__table--body__child--items { display: flex; justify-content: space-between; padding: 0.6rem 1rem; border: 0; }
+    .account__table--body__child--items .label { color: var(--text-muted); font-size: 1.1rem; }
+    .account__table--body__child--items .value { font-weight: 700; color: var(--text-dark); }
+}
+
+/* Column sizing and badge alignment for desktop */
+@media only screen and (min-width: 768px) {
+    .account__table--header__child--items:nth-child(1), /* Order ID */
+    .account__table--body__child--items:nth-child(1) {
+        flex: 0 0 15%;
+        text-align: left;
+    }
+
+    .account__table--header__child--items:nth-child(2), /* Date */
+    .account__table--body__child--items:nth-child(2) {
+        flex: 0 0 25%;
+        white-space: nowrap; /* keep date on one line */
+        text-align: center;
+    }
+
+    .account__table--header__child--items:nth-child(3), /* Status */
+    .account__table--body__child--items:nth-child(3) {
+        flex: 0 0 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .account__table--header__child--items:nth-child(4), /* Total */
+    .account__table--body__child--items:nth-child(4) {
+        flex: 0 0 20%;
+        text-align: center;
+    }
+
+    .account__table--header__child--items:nth-child(5), /* Action */
+    .account__table--body__child--items:nth-child(5) {
+        flex: 0 0 20%;
+        text-align: right;
+    }
+
+    /* make badges centered and consistent */
+    .account__table--body__child--items .status-badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 22px;
+        box-shadow: none;
+        font-weight: 700;
+    }
+
+    /* keep action buttons from stretching */
+    .account__table--body__child--items button {
+        white-space: nowrap;
+    }
+}
+
 
 /* Cart Item Styling */
 .dropdown-menu .d-flex.align-items-center {

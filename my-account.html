@@ -418,126 +418,7 @@
             box-shadow: 0 8px 20px rgba(104,159,56,0.18);
         }
 
-        /* Responsive: stack rows into cards */
-        @media (max-width: 767px) {
-            .orders-table {
-                border-spacing: 0;
-            }
-            
-            .orders-table thead {
-                display: none;
-            }
-
-            .orders-table, 
-            .orders-table tbody, 
-            .orders-table tr, 
-            .orders-table td {
-                display: block;
-                width: 100%;
-            }
-
-            .orders-table tbody tr {
-                margin-bottom: 20px;
-                border-radius: 16px;
-                padding: 0;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                border: 1px solid #e0e0e0;
-                overflow: hidden;
-            }
-
-            .orders-table tbody tr:hover {
-                transform: none;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            .orders-table tbody td {
-                padding: 14px 18px;
-                border-left: none !important;
-                position: relative;
-                text-align: right !important;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid #f0f0f0;
-                background: white;
-            }
-            
-            .orders-table tbody td:last-child {
-                border-bottom: none;
-            }
-
-            /* Add labels before each cell */
-            .orders-table tbody td::before {
-                content: attr(data-label);
-                font-weight: 600;
-                color: var(--text-dark);
-                font-size: 14px;
-                text-transform: none;
-                letter-spacing: normal;
-                flex-shrink: 0;
-                margin-right: 15px;
-                text-align: left;
-            }
-
-            /* Order ID styling */
-            .orders-table tbody td:first-child {
-                font-size: 15px;
-                font-weight: 600;
-                color: var(--text-dark);
-                background: white;
-                border-radius: 0;
-            }
-
-            .orders-table tbody td:first-child .order-id {
-                color: var(--light-green);
-                font-weight: 600;
-            }
-
-            /* All cells use data-label attributes */
-            .orders-table tbody td:nth-child(2) {
-                color: var(--text-muted);
-                width: auto;
-            }
-
-            .orders-table tbody td:nth-child(3) {
-                text-align: right;
-                width: auto;
-            }
-
-            .orders-table tbody td:nth-child(4) {
-                text-align: right;
-                color: var(--text-dark);
-                width: auto;
-            }
-
-            .orders-table tbody td:nth-child(5) {
-                text-align: right;
-                width: auto;
-            }
-            
-            .orders-table tbody td:nth-child(6) {
-                border-radius: 0;
-                background: white;
-                justify-content: space-between;
-                padding: 14px 18px;
-            }
-            
-            .orders-table tbody td:nth-child(6)::before {
-                content: attr(data-label);
-            }
-            
-            .btn-primary-green {
-                padding: 10px 20px !important;
-                font-size: 13px !important;
-                border-radius: 8px;
-            }
-            
-            .status-badge {
-                margin-left: auto;
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-        }
+       
 
         /* Profile Form */
         .profile-form {
@@ -1392,52 +1273,38 @@
                                 
                                 <!-- Recent Orders Preview -->
                                 <h4 style="margin-bottom: 15px; color: var(--text-dark);">Recent Orders</h4>
-                                <table class="orders-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Order ID</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Total</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Order ID"><span class="order-id">#2024</span></td>
-                                            <td data-label="Date">November 24, 2024</td>
-                                            <td data-label="Status"><span class="status-badge status-fulfilled">Fulfilled</span></td>
-                                            <td data-label="Total">Rs. 2,340</td>
-                                            <td data-label="Action">
-                                                <button class="orders-action-btn" aria-label="View Order #2024">
-                                                    <i class="bi bi-eye"></i> View
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Order ID"><span class="order-id">#2023</span></td>
-                                            <td data-label="Date">November 20, 2024</td>
-                                            <td data-label="Status"><span class="status-badge status-pending">Processing</span></td>
-                                            <td data-label="Total">Rs. 1,850</td>
-                                            <td data-label="Action">
-                                                <button class="orders-action-btn" aria-label="View Order #2023">
-                                                    <i class="bi bi-eye"></i> View
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Order ID"><span class="order-id">#2022</span></td>
-                                            <td data-label="Date">November 15, 2024</td>
-                                            <td data-label="Status"><span class="status-badge status-fulfilled">Fulfilled</span></td>
-                                            <td data-label="Total">Rs. 3,200</td>
-                                            <td data-label="Action">
-                                                <button class="orders-action-btn" aria-label="View Order #2022">
-                                                    <i class="bi bi-eye"></i> View
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="account__table">
+                                    <div class="account__table--header">
+                                        <div class="account__table--header__child--items">Order ID</div>
+                                        <div class="account__table--header__child--items">Date</div>
+                                        <div class="account__table--header__child--items">Status</div>
+                                        <div class="account__table--header__child--items">Total</div>
+                                        <div class="account__table--header__child--items">Action</div>
+                                    </div>
+                                    <div class="account__table--body">
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 24, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Status</span><span class="value"><span class="status-badge status-fulfilled">Fulfilled</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 2,340</span></div>
+                                            <div class="account__table--body__child--items"><button class="orders-action-btn" aria-label="View Order #2024"><i class="bi bi-eye"></i> View</button></div>
+                                        </div>
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2023</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 20, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Status</span><span class="value"><span class="status-badge status-pending">Processing</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 1,850</span></div>
+                                            <div class="account__table--body__child--items"><button class="orders-action-btn" aria-label="View Order #2023"><i class="bi bi-eye"></i> View</button></div>
+                                        </div>
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2022</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 15, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Status</span><span class="value"><span class="status-badge status-fulfilled">Fulfilled</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 3,200</span></div>
+                                            <div class="account__table--body__child--items"><button class="orders-action-btn" aria-label="View Order #2022"><i class="bi bi-eye"></i> View</button></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -1447,68 +1314,50 @@
                              <h4 style="margin-bottom: 15px; color: var(--text-dark);">Recent Orders</h4>
                             
                             <div class="table-responsive" style="overflow:auto;">
-                            <table class="orders-table">
-                                <thead>
-                                    <tr>
-                                        <th>Order ID</th>
-                                        <th>Date</th>
-                                        <th>Payment</th>
-                                        <th>Fulfillment</th>
-                                        <th>Total</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="Order ID"><span class="order-id">#2024</span></td>
-                                        <td data-label="Date">November 24, 2024</td>
-                                        <td data-label="Payment"><span class="status-badge status-paid">Paid</span></td>
-                                        <td data-label="Fulfillment"><span class="status-badge status-fulfilled">Fulfilled</span></td>
-                                        <td data-label="Total">Rs. 2,340</td>
-                                        <td data-label="Action">
-                                            <button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;">
-                                                <i class="bi bi-receipt"></i> Invoice
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Order ID"><span class="order-id">#2023</span></td>
-                                        <td data-label="Date">November 20, 2024</td>
-                                        <td data-label="Payment"><span class="status-badge status-paid">Paid</span></td>
-                                        <td data-label="Fulfillment"><span class="status-badge status-unfulfilled">Processing</span></td>
-                                        <td data-label="Total">Rs. 1,850</td>
-                                        <td data-label="Action">
-                                            <button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;">
-                                                <i class="bi bi-receipt"></i> Invoice
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Order ID"><span class="order-id">#2022</span></td>
-                                        <td data-label="Date">November 15, 2024</td>
-                                        <td data-label="Payment"><span class="status-badge status-paid">Paid</span></td>
-                                        <td data-label="Fulfillment"><span class="status-badge status-fulfilled">Fulfilled</span></td>
-                                        <td data-label="Total">Rs. 3,200</td>
-                                        <td data-label="Action">
-                                            <button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;">
-                                                <i class="bi bi-receipt"></i> Invoice
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Order ID"><span class="order-id">#2021</span></td>
-                                        <td data-label="Date">November 10, 2024</td>
-                                        <td data-label="Payment"><span class="status-badge status-pending">Pending</span></td>
-                                        <td data-label="Fulfillment"><span class="status-badge status-unfulfilled">Pending</span></td>
-                                        <td data-label="Total">Rs. 1,280</td>
-                                        <td data-label="Action">
-                                            <button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;">
-                                                <i class="bi bi-receipt"></i> Invoice
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <div class="account__table">
+                                    <div class="account__table--header">
+                                        <div class="account__table--header__child--items">Order ID</div>
+                                        <div class="account__table--header__child--items">Date</div>
+                                        <div class="account__table--header__child--items">Payment</div>
+                                        <div class="account__table--header__child--items">Fulfillment</div>
+                                        <div class="account__table--header__child--items">Total</div>
+                                        <div class="account__table--header__child--items">Action</div>
+                                    </div>
+                                    <div class="account__table--body">
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 24, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Payment</span><span class="value"><span class="status-badge status-paid">Paid</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Fulfillment</span><span class="value"><span class="status-badge status-fulfilled">Fulfilled</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 2,340</span></div>
+                                            <div class="account__table--body__child--items"><button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;"><i class="bi bi-receipt"></i> Invoice</button></div>
+                                        </div>
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2023</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 20, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Payment</span><span class="value"><span class="status-badge status-paid">Paid</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Fulfillment</span><span class="value"><span class="status-badge status-unfulfilled">Processing</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 1,850</span></div>
+                                            <div class="account__table--body__child--items"><button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;"><i class="bi bi-receipt"></i> Invoice</button></div>
+                                        </div>
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2022</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 15, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Payment</span><span class="value"><span class="status-badge status-paid">Paid</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Fulfillment</span><span class="value"><span class="status-badge status-fulfilled">Fulfilled</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 3,200</span></div>
+                                            <div class="account__table--body__child--items"><button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;"><i class="bi bi-receipt"></i> Invoice</button></div>
+                                        </div>
+                                        <div class="account__table--body__child">
+                                            <div class="account__table--body__child--items"><span class="label">Order ID</span><span class="value order-id">#2021</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Date</span><span class="value">November 10, 2024</span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Payment</span><span class="value"><span class="status-badge status-pending">Pending</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Fulfillment</span><span class="value"><span class="status-badge status-unfulfilled">Pending</span></span></div>
+                                            <div class="account__table--body__child--items"><span class="label">Total</span><span class="value">Rs. 1,280</span></div>
+                                            <div class="account__table--body__child--items"><button class="btn-primary-green" style="padding: 8px 16px; font-size: 14px;"><i class="bi bi-receipt"></i> Invoice</button></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -1854,15 +1703,37 @@
             }
 
             function getRowData(row) {
-                var cells = row.querySelectorAll('td');
-                if (!cells || cells.length < 5) return null;
-                return {
-                    orderId: cells[0].innerText.trim(),
-                    dateText: cells[1].innerText.trim(),
-                    statusEl: cells[2].querySelector('.status-badge'),
-                    totalText: cells[3].innerText.trim(),
-                    actionEl: cells[4]
-                };
+                // support both old table rows and new .account__table--body__child blocks
+                if (!row) return null;
+                // if it's a table row
+                if (row.tagName === 'TR') {
+                    var cells = row.querySelectorAll('td');
+                    if (!cells || cells.length < 5) return null;
+                    return {
+                        orderId: cells[0].innerText.trim(),
+                        dateText: cells[1].innerText.trim(),
+                        statusEl: cells[2].querySelector('.status-badge'),
+                        totalText: cells[3].innerText.trim(),
+                        actionEl: cells[4]
+                    };
+                }
+
+                // handle new div-based row
+                if (row.classList && row.classList.contains('account__table--body__child')) {
+                    var idEl = row.querySelector('.order-id');
+                    var dateEl = row.querySelector('.account__table--body__child--items:nth-child(2) .value') || row.querySelectorAll('.account__table--body__child--items')[1];
+                    var statusEl = row.querySelector('.status-badge');
+                    var totalEl = row.querySelectorAll('.account__table--body__child--items')[3];
+                    return {
+                        orderId: idEl ? idEl.innerText.trim() : (row.querySelector('.account__table--body__child--items .label') ? row.querySelector('.account__table--body__child--items .label').innerText.trim() : ''),
+                        dateText: dateEl ? dateEl.innerText.trim() : '',
+                        statusEl: statusEl,
+                        totalText: totalEl ? totalEl.innerText.trim() : '',
+                        actionEl: row.querySelector('button')
+                    };
+                }
+
+                return null;
             }
 
             function matchesFilters(row) {
@@ -1893,15 +1764,22 @@
             }
 
             function applyFilters() {
-                var tbody = document.querySelector('.orders-table tbody');
-                if (!tbody) return;
-                var rows = Array.from(tbody.querySelectorAll('tr'));
-                rows.forEach(function (r) {
-                    if (matchesFilters(r)) {
-                        r.style.display = '';
-                    } else {
-                        r.style.display = 'none';
-                    }
+                // handle both table-based and new div-based lists
+                var tableBody = document.querySelector('.orders-table tbody');
+                if (tableBody) {
+                    var rows = Array.from(tableBody.querySelectorAll('tr'));
+                    rows.forEach(function (r) {
+                        if (matchesFilters(r)) r.style.display = '';
+                        else r.style.display = 'none';
+                    });
+                    return;
+                }
+
+                var divRows = Array.from(document.querySelectorAll('.account__table--body__child'));
+                if (!divRows || divRows.length === 0) return;
+                divRows.forEach(function (r) {
+                    if (matchesFilters(r)) r.style.display = '';
+                    else r.style.display = 'none';
                 });
             }
 
