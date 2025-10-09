@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Balaji Dosai - Login & Register</title>
+    <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="plugin/bootstrap/datepicker.css" rel="stylesheet">
+    <link href="plugin/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="plugin/form-field/jquery.formstyler.css" rel="stylesheet">
+    <link href="plugin/revolution-plugin/extralayers.css" rel="stylesheet">
+    <link href="plugin/revolution-plugin/settings.css" rel="stylesheet">
+    <link href="plugin/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugin/owl-carousel/owl.theme.default.css" rel="stylesheet">
+    <link href="plugin/slick-slider/slick-theme.css" rel="stylesheet">
+    <link href="plugin/magnific/magnific-popup.css" rel="stylesheet">
+    <link href="plugin/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="plugin/animation/animate.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Auth Section Styles - cream & light-green palette */
+        :root {
+            --cream: #FFF8E1; /* soft cream */
+            --light-green: #8BC34A; /* main light green */
+            --green-deep: #689F38; /* deeper accent */
+            --muted: #666666;
+            --card-bg: #ffffff;
+            --input-bg: #fbfbf8;
+            --border: #e9e6dd;
+        }
+
+        .auth-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--cream) 0%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .auth-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .auth-card:hover {
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .auth-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--green-deep) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        .auth-header h2 {
+            font-size: 32px;
+            color: var(--green-deep);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .auth-header p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .auth-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .auth-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .auth-form .half-width {
+            margin-bottom: 25px;
+        }
+
+        .auth-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .auth-form label i {
+            margin-right: 8px;
+            color: var(--light-green);
+        }
+
+        .auth-form input[type="text"],
+        .auth-form input[type="email"],
+        .auth-form input[type="password"] {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: var(--input-bg);
+        }
+
+        .auth-form input:focus {
+            outline: none;
+            border-color: var(--light-green);
+            background: #ffffff;
+            box-shadow: 0 0 0 6px rgba(139, 195, 74, 0.12);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--light-green);
+        }
+
+        .checkbox-label a {
+            color: var(--green-deep);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .checkbox-label a:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-link {
+            color: var(--green-deep);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: var(--light-green);
+            text-decoration: underline;
+        }
+
+        .btn-auth {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--green-deep) 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .btn-auth:hover {
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--light-green) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(104, 159, 56, 0.18);
+        }
+
+        .btn-auth i {
+            font-size: 20px;
+        }
+
+        .divider {
+            position: relative;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .divider span {
+            background: var(--card-bg);
+            padding: 0 15px;
+            color: #999;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-social {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid var(--border);
+            background: var(--card-bg);
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .btn-google:hover {
+            border-color: #4285F4;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.08);
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .auth-footer p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .auth-footer .switch-link {
+            color: var(--green-deep);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .auth-footer .switch-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .auth-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .auth-card {
+                padding: 40px 30px;
+            }
+
+            .auth-section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .auth-card {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .auth-header h2 {
+                font-size: 26px;
+            }
+
+            .auth-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+
+            .auth-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Start Header -->
+        <header class="modern-header">
+            <nav class="navbar-modern">
+                <div class="container-fluid">
+                    <div class="nav-wrapper">
+                        <!-- Left Side - Logo -->
+                        <div class="nav-logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Dosa Coffee" class="logo-image">
+                            </a>
+                        </div>
+
+                        <!-- Center - Navigation Menu -->
+                        <div class="nav-menu">
+                            <ul class="nav-links">
+                                <li><a href="index.html" class="nav-link">Home</a></li>
+                                <li><a href="about.html" class="nav-link">About Us</a></li>
+                                <li><a href="specialties.html" class="nav-link">Specialties</a></li>
+                                <li><a href="services.html" class="nav-link">Services</a></li>
+                                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Side - Login Button -->
+                        <div class="nav-actions">
+                            <a href="#login" class="btn-login">Login</a>
+
+                            <!-- Mobile Menu Toggle -->
+                            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+                            <!-- Cart Dropdown -->
+                            <div class="cart-dropdown">
+                                <a class="btn-cart position-relative" href="#" role="button">
+                                    <i class="bi bi-cart"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        2
+                                    </span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end p-3 my-cart-menu">
+                                    <!-- Cart Items -->
+                                    <li class="cart-list-item">
+                                        <img src="images\Mixture\mixture-1.jpg" class="me-2 rounded nav-prod-img"
+                                            alt="Classic Kara Boondhi">
+                                        <div class="flex-grow-1">
+                                            <div>Classic Kara Boondhi</div>
+                                            <small class="text-muted">Qty: 2 × Rs. 230.00</small>
+                                        </div>
+                                        <div class="fw-bold">Rs. 460.00</div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li class="cart-list-item">
+                                        <img src="images\Mixture\mixture-2.jpg" class="me-2 rounded nav-prod-img"
+                                            alt="Madras Mixture">
+                                        <div class="flex-grow-1">
+                                            <div>Madras Mixture</div>
+                                            <small class="text-muted">Qty: 1 × Rs. 210.00</small>
+                                        </div>
+                                        <div class="fw-bold">Rs. 210.00</div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <!-- Buttons -->
+                                    <li class="d-grid gap-2">
+                                        <a href="#cart" class="btn btn-primary btn-cart-view">Go to Cart</a>
+                                        <a href="#checkout" class="btn btn-primary btn-cart-checkout">Checkout</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-nav-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="specialties.html" class="mobile-nav-link">Specialties</a></li>
+                    <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+                    <li><a href="#login" class="mobile-nav-link">Login</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Start Main -->
+        <main>
+            <div class="main-part">
+                <!-- Start Breadcrumb Part -->
+                <section class="breadcrumb-part" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5"
+                    style="background-image: url('images/breadbg1.jpg');">
+                    <div class="container">
+                        <div class="breadcrumb-inner">
+                            <h2>Login & Register</h2>
+                            <a href="index.html">Home</a>
+                            <span>Authentication</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Breadcrumb Part -->
+                
+                <!-- Start Login Register Section -->
+                <section class="auth-section">
+                    <div class="container">
+                        <div class="auth-container">
+                            <!-- Login Form - Left Side -->
+                            <div class="auth-card login-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <div class="auth-header">
+                                    <div class="auth-icon">
+                                        <i class="bi bi-person-circle"></i>
+                                    </div>
+                                    <h2>Welcome Back</h2>
+                                    <p>Login to your account</p>
+                                </div>
+                                
+                                <form class="auth-form" method="post" name="login">
+                                    <div class="form-group">
+                                        <label for="login-email">
+                                            <i class="bi bi-envelope"></i>
+                                            Email Address
+                                        </label>
+                                        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="login-password">
+                                            <i class="bi bi-lock"></i>
+                                            Password
+                                        </label>
+                                        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                                    </div>
+                                    
+                                    <div class="form-options">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="remember">
+                                            <span>Remember me</span>
+                                        </label>
+                                        <a href="#" class="forgot-link">Forgot Password?</a>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-auth btn-login-submit">
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                        Login Now
+                                    </button>
+                                </form>
+                                
+                                <div class="divider">
+                                    <span>Or continue with</span>
+                                </div>
+                                
+                                <button class="btn-social btn-google">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.8055 10.2292C19.8055 9.55056 19.7508 8.86667 19.6328 8.19792H10.2V12.0488H15.6016C15.3773 13.2911 14.6571 14.3898 13.6023 15.0875V17.5866H16.8251C18.7176 15.8449 19.8055 13.2728 19.8055 10.2292Z" fill="#4285F4"/>
+                                        <path d="M10.2 20C12.9567 20 15.2727 19.1053 16.8297 17.5866L13.6069 15.0875C12.7019 15.6977 11.5492 16.0427 10.2047 16.0427C7.54422 16.0427 5.29078 14.2828 4.49219 11.9164H1.17969V14.4925C2.77187 17.8547 6.30703 20 10.2 20Z" fill="#34A853"/>
+                                        <path d="M4.4875 11.9164C4.04531 10.6741 4.04531 9.33134 4.4875 8.08915V5.51302H1.17969C-0.226563 8.51302 -0.226563 11.9164 1.17969 14.9164L4.4875 11.9164Z" fill="#FBBC04"/>
+                                        <path d="M10.2 3.95729C11.6227 3.93521 13.0008 4.47188 14.0414 5.45833L16.8953 2.60417C15.1836 0.990625 12.9336 0.0994792 10.2 0.125C6.30703 0.125 2.77187 2.27031 1.17969 5.63281L4.4875 8.20885C5.28141 5.8375 7.53953 3.95729 10.2 3.95729Z" fill="#EA4335"/>
+                                    </svg>
+                                    Sign in with Google
+                                </button>
+                                
+                                <div class="auth-footer">
+                                    <p>Don't have an account? <a href="#register" class="switch-link">Sign up here</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Register Form - Right Side -->
+                            <div class="auth-card register-card wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                <div class="auth-header">
+                                    <div class="auth-icon">
+                                        <i class="bi bi-person-plus-fill"></i>
+                                    </div>
+                                    <h2>Create Account</h2>
+                                    <p>Join us today and enjoy our delicious food</p>
+                                </div>
+                                
+                                <form class="auth-form" method="post" name="register">
+                                    <div class="form-row">
+                                        <div class="form-group half-width">
+                                            <label for="register-firstname">
+                                                <i class="bi bi-person"></i>
+                                                First Name
+                                            </label>
+                                            <input type="text" id="register-firstname" name="firstname" placeholder="First Name" required>
+                                        </div>
+                                        
+                                        <div class="form-group half-width">
+                                            <label for="register-lastname">
+                                                <i class="bi bi-person"></i>
+                                                Last Name
+                                            </label>
+                                            <input type="text" id="register-lastname" name="lastname" placeholder="Last Name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="register-email">
+                                            <i class="bi bi-envelope"></i>
+                                            Email Address
+                                        </label>
+                                        <input type="email" id="register-email" name="email" placeholder="your.email@example.com" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="register-password">
+                                            <i class="bi bi-lock"></i>
+                                            Password
+                                        </label>
+                                        <input type="password" id="register-password" name="password" placeholder="Create a strong password" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="register-confirm">
+                                            <i class="bi bi-lock-fill"></i>
+                                            Confirm Password
+                                        </label>
+                                        <input type="password" id="register-confirm" name="confirm_password" placeholder="Confirm your password" required>
+                                    </div>
+                                    
+                                    <div class="form-options">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="terms" required>
+                                            <span>I agree to the <a href="terms_condition.html" target="_blank">Terms & Conditions</a></span>
+                                        </label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-auth btn-register-submit">
+                                        <i class="bi bi-person-check"></i>
+                                        Create Account
+                                    </button>
+                                </form>
+                                
+                                <div class="divider">
+                                    <span>Or sign up with</span>
+                                </div>
+                                
+                                <button class="btn-social btn-google">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.8055 10.2292C19.8055 9.55056 19.7508 8.86667 19.6328 8.19792H10.2V12.0488H15.6016C15.3773 13.2911 14.6571 14.3898 13.6023 15.0875V17.5866H16.8251C18.7176 15.8449 19.8055 13.2728 19.8055 10.2292Z" fill="#4285F4"/>
+                                        <path d="M10.2 20C12.9567 20 15.2727 19.1053 16.8297 17.5866L13.6069 15.0875C12.7019 15.6977 11.5492 16.0427 10.2047 16.0427C7.54422 16.0427 5.29078 14.2828 4.49219 11.9164H1.17969V14.4925C2.77187 17.8547 6.30703 20 10.2 20Z" fill="#34A853"/>
+                                        <path d="M4.4875 11.9164C4.04531 10.6741 4.04531 9.33134 4.4875 8.08915V5.51302H1.17969C-0.226563 8.51302 -0.226563 11.9164 1.17969 14.9164L4.4875 11.9164Z" fill="#FBBC04"/>
+                                        <path d="M10.2 3.95729C11.6227 3.93521 13.0008 4.47188 14.0414 5.45833L16.8953 2.60417C15.1836 0.990625 12.9336 0.0994792 10.2 0.125C6.30703 0.125 2.77187 2.27031 1.17969 5.63281L4.4875 8.20885C5.28141 5.8375 7.53953 3.95729 10.2 3.95729Z" fill="#EA4335"/>
+                                    </svg>
+                                    Sign up with Google
+                                </button>
+                                
+                                <div class="auth-footer">
+                                    <p>Already have an account? <a href="#login" class="switch-link">Login here</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Login Register Section -->
+            </div>
+        </main>
+        <!-- End Main -->
+        
+        <!-- Start Footer -->
+        <footer>
+            <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="icon-default icon-dark">
+                    <img src="images/logo.png" alt="" style="width: 75px;">
+                </div>
+                <div class="container">
+                    <div class="footer-inner">
+                        <div class="footer-info">
+                            <h3>Balaji Dosai Restaurant</h3>
+                            <p class="font-futura">03, D.S. Senanayaka street, Kandy, Sri Lanka</p>
+                            <p><a href="#" class="font-futura">0812 224 593</a></p>
+                            <p><a href="#" class="font-futura">support@balajidosai.lk</a></p>
+                            <div class="social-round" style="margin-top: 10px;">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/BalajiDosai">
+                                            <i class="bi bi-facebook"></i>
+                                        </a></li>
+                                    <li style="margin: 0;"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy-right">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 copyright-before text-center">
+                                2025 © All Rights Reserved | Balaji Dosai | Designed & Developed by Silicon Radon
+                                Networks (Pvt) Ltd.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+    
+    <!-- Back To Top Arrow -->
+    <a href="#" class="top-arrow"></a>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="plugin/bootstrap/bootstrap.min.js"></script>
+    <script src="plugin/bootstrap/bootstrap-datepicker.js"></script>
+    <script src="plugin/form-field/jquery.formstyler.min.js"></script>
+    <script src="plugin/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugin/slick-slider/slick.min.js"></script>
+    <script src="plugin/animation/wow.min.js"></script>
+    <script src="plugin/parallax/jquery.stellar.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>
+    
+    <script>
+        // Smooth scroll for switch links
+        document.querySelectorAll('.switch-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                const card = target === '#register' ? 
+                    document.querySelector('.register-card') : 
+                    document.querySelector('.login-card');
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
+</body>
+
+</html>
