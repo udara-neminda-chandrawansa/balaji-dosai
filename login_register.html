@@ -40,7 +40,6 @@
 
         .auth-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--cream) 0%, #ffffff 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -607,6 +606,7 @@
         </main>
         <!-- End Main -->
         
+
         <!-- Start Footer -->
         <footer>
             <div class="footer-part wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -621,13 +621,13 @@
                             <p><a href="#" class="font-futura">0812 224 593</a></p>
                             <p><a href="#" class="font-futura">support@balajidosai.lk</a></p>
                             <div class="social-round" style="margin-top: 10px;">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/BalajiDosai">
-                                            <i class="bi bi-facebook"></i>
-                                        </a></li>
-                                    <li style="margin: 0;"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                                </ul>
-                            </div>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/BalajiDosai">
+                                                <i class="bi bi-facebook"></i>
+                                            </a></li>
+                                        <li style="margin: 0;"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                    </ul>
+                                </div>
                         </div>
                     </div>
                     <div class="copy-right">
@@ -636,42 +636,145 @@
                                 2025 © All Rights Reserved | Balaji Dosai | Designed & Developed by Silicon Radon
                                 Networks (Pvt) Ltd.
                             </div>
+                            <!-- <div class="col-md-2 col-sm-2 col-xs-12 copyright-after">
+                                <div class="social-round">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/BalajiDosai">
+                                                <i class="bi bi-facebook"></i>
+                                            </a></li>
+                                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
                         </div>
+                    </div>
+                </div>
+                <!--map (hidden)-->
+                <div class="icon-find" style="display: none;">
+                    <a href="#">
+                        <img src="images/location.png" alt="">
+                        <span>Find us on Map</span>
+                    </a>
+                </div>
+                <div class="location-footer-map" style="display: none;">
+                    <div class="icon-find-location">
+                        <a href="#">
+                            <img src="images/location.png" alt="">
+                            <span>Find us on Map</span>
+                        </a>
+                    </div>
+                    <div class="footer-map-outer">
+                        <div id="footer-map"></div>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- End Footer -->
     </div>
-    
     <!-- Back To Top Arrow -->
     <a href="#" class="top-arrow"></a>
-    
+    <!--Messenger and WhatsApp Floating btns-->
+    <a href="#" class="float" style="z-index: 999999;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-messenger my-float" viewBox="0 0 16 16">
+            <path
+                d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+        </svg>
+    </a>
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script>
+        var wa_btnSetting = { "btnColor": "#16BE45", "ctaText": "", "cornerRadius": 40, "marginBottom": 20, "marginLeft": 20, "marginRight": 20, "btnPosition": "right", "whatsAppNumber": "#", "welcomeMessage": "Hello! How can we help you today?", "zIndex": 999999, "btnColorScheme": "light" };
+        window.onload = () => {
+            _waEmbed(wa_btnSetting);
+        };
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="plugin/bootstrap/bootstrap.min.js"></script>
     <script src="plugin/bootstrap/bootstrap-datepicker.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf6My1Jfdi1Fmj-DUmX_CcNOZ6FLkQ4Os"></script>
     <script src="plugin/form-field/jquery.formstyler.min.js"></script>
+    <script src="plugin/revolution-plugin/jquery.themepunch.plugins.min.js"></script>
+    <script src="plugin/revolution-plugin/jquery.themepunch.revolution.min.js"></script>
     <script src="plugin/owl-carousel/owl.carousel.min.js"></script>
     <script src="plugin/slick-slider/slick.min.js"></script>
+    <script src="plugin/isotop/isotop.js"></script>
+    <script src="plugin/isotop/packery-mode.pkgd.min.js"></script>
+    <script src="plugin/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="plugin/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="plugin/animation/wow.min.js"></script>
     <script src="plugin/parallax/jquery.stellar.js"></script>
     <script src="js/app.js"></script>
     <script src="js/script.js"></script>
     <script src="js/custom.js"></script>
-    
     <script>
-        // Smooth scroll for switch links
-        document.querySelectorAll('.switch-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = this.getAttribute('href');
-                const card = target === '#register' ? 
-                    document.querySelector('.register-card') : 
-                    document.querySelector('.login-card');
-                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            });
-        });
+        // initialize slick slider for signature grid when DOM is ready
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.slick !== 'undefined') {
+                    jQuery(document).ready(function ($) {
+                        $('.signature-grid').each(function () {
+                            var $grid = $(this);
+                            // avoid double-init
+                            if ($grid.hasClass('slick-initialized')) return;
+                            var itemCount = $grid.find('.sig-item').length || 1;
+                            $grid.slick({
+                                slidesToShow: 5,
+                                slidesToScroll: 1,
+                                arrows: true,
+                                dots: false,
+                                infinite: true,
+                                autoplay: true,
+                                autoplaySpeed: 3000,
+                                pauseOnHover: true,
+                                speed: 600,
+                                responsive: [
+                                    { breakpoint: 1200, settings: { slidesToShow: 4 } },
+                                    { breakpoint: 992, settings: { slidesToShow: 3 } },
+                                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                                    { breakpoint: 480, settings: { slidesToShow: 1 } }
+                                ]
+                            });
+                        });
+                    });
+                }
+            } catch (e) { console.warn('Slick init failed', e); }
+        })();
     </script>
+    <script>
+        // manual tap zones for signature grid navigation
+        (function () {
+            try {
+                if (typeof jQuery !== 'undefined') {
+                    jQuery(function ($) {
+                        // Handle visible arrow buttons
+                        $('.sig-arrow-left').on('click', function (e) {
+                            e.preventDefault();
+                            $(this).closest('.signature-dishes').find('.signature-grid').slick('slickPrev');
+                        });
+                        $('.sig-arrow-right').on('click', function (e) {
+                            e.preventDefault();
+                            $(this).closest('.signature-dishes').find('.signature-grid').slick('slickNext');
+                        });
+
+                        // Handle invisible tap zones (if they exist)
+                        var $left = $('.sig-nav-left');
+                        var $right = $('.sig-nav-right');
+                        $left.on('click touchstart', function (e) {
+                            e.preventDefault();
+                            $('.signature-grid').slick && $('.signature-grid').slick('slickPrev');
+                        });
+                        $right.on('click touchstart', function (e) {
+                            e.preventDefault();
+                            $('.signature-grid').slick && $('.signature-grid').slick('slickNext');
+                        });
+                    });
+                }
+            } catch (err) { console.warn('sig-nav init failed', err); }
+        })();
+    </script>
+    
+
 </body>
+
 
 </html>
