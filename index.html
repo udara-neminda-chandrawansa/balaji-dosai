@@ -1244,115 +1244,134 @@
         })();
     </script>
     
-    <!-- Mixture Products Auto-Scroll Script -->
+    <!-- Mixture Products: card-by-card auto-advance and snap-on-drag -->
     <script>
-        // Auto-scroll functionality for mixture products with drag support
         document.addEventListener('DOMContentLoaded', function() {
             const slider = document.querySelector('.mixture-products-slider');
-            
-            if (slider) {
-                let scrollAmount = 0;
-                let scrollDirection = 1; // 1 for right, -1 for left
-                let scrollSpeed = 1; // pixels per frame
-                let isAutoScrolling = true;
-                let isDragging = false;
-                let startX;
-                let scrollLeft;
-                
-                function autoScroll() {
-                    if (!slider || !isAutoScrolling) return;
-                    
-                    // Get max scroll position
-                    const maxScroll = slider.scrollWidth - slider.clientWidth;
-                    
-                    // Auto scroll
-                    scrollAmount += scrollSpeed * scrollDirection;
-                    slider.scrollLeft = scrollAmount;
-                    
-                    // Change direction when reaching end
-                    if (scrollAmount >= maxScroll) {
-                        scrollDirection = -1;
-                    } else if (scrollAmount <= 0) {
-                        scrollDirection = 1;
-                    }
-                    
-                    requestAnimationFrame(autoScroll);
-                }
-                
-                // Start auto-scroll
-                autoScroll();
-                
-                // Pause on hover
-                slider.addEventListener('mouseenter', function() {
-                    isAutoScrolling = false;
+            if (!slider) return;
+
+            const cards = Array.from(slider.querySelectorAll('.mixture-product-card'));
+            if (!cards.length) return;
+
+            let positions = [];
+            function buildPositions() {
+                const sliderRect = slider.getBoundingClientRect();
+                positions = cards.map(c => {
+                    const rect = c.getBoundingClientRect();
+                    // position relative to scrollLeft
+                    return rect.left - sliderRect.left + slider.scrollLeft;
                 });
-                
-                slider.addEventListener('mouseleave', function() {
-                    if (!isDragging) {
-                        scrollAmount = slider.scrollLeft;
-                        isAutoScrolling = true;
-                        autoScroll();
-                    }
-                });
-                
-                // Mouse drag functionality
-                slider.addEventListener('mousedown', function(e) {
-                    isDragging = true;
-                    isAutoScrolling = false;
-                    slider.style.cursor = 'grabbing';
-                    startX = e.pageX - slider.offsetLeft;
-                    scrollLeft = slider.scrollLeft;
-                });
-                
-                slider.addEventListener('mousemove', function(e) {
-                    if (!isDragging) return;
-                    e.preventDefault();
-                    const x = e.pageX - slider.offsetLeft;
-                    const walk = (x - startX) * 2; // Scroll speed multiplier
-                    slider.scrollLeft = scrollLeft - walk;
-                    scrollAmount = slider.scrollLeft;
-                });
-                
-                slider.addEventListener('mouseup', function() {
-                    isDragging = false;
-                    slider.style.cursor = 'grab';
-                });
-                
-                slider.addEventListener('mouseleave', function() {
-                    if (isDragging) {
-                        isDragging = false;
-                        slider.style.cursor = 'grab';
-                    }
-                });
-                
-                // Touch/swipe functionality for mobile
-                let touchStartX = 0;
-                let touchScrollLeft = 0;
-                
-                slider.addEventListener('touchstart', function(e) {
-                    isAutoScrolling = false;
-                    touchStartX = e.touches[0].pageX;
-                    touchScrollLeft = slider.scrollLeft;
-                }, { passive: true });
-                
-                slider.addEventListener('touchmove', function(e) {
-                    const touchX = e.touches[0].pageX;
-                    const walk = (touchStartX - touchX) * 1.5; // Swipe speed
-                    slider.scrollLeft = touchScrollLeft + walk;
-                    scrollAmount = slider.scrollLeft;
-                }, { passive: true });
-                
-                slider.addEventListener('touchend', function() {
-                    setTimeout(function() {
-                        scrollAmount = slider.scrollLeft;
-                        isAutoScrolling = true;
-                        autoScroll();
-                    }, 2000); // Resume auto-scroll after 2 seconds
-                });
-                
-                // Set initial cursor
-                slider.style.cursor = 'grab';
             }
+
+            // Rebuild positions on load and resize
+            buildPositions();
+            window.addEventListener('resize', function() {
+                // small timeout to allow layout settle
+                setTimeout(buildPositions, 120);
+            });
+
+            // Navigation / snapping
+            let currentIndex = 0;
+            function goToIndex(idx, smooth = true) {
+                idx = Math.max(0, Math.min(cards.length - 1, idx));
+                currentIndex = idx;
+                const left = positions[idx] || 0;
+                // Use smooth scroll when requested
+                try {
+                    slider.scrollTo({ left: left, behavior: smooth ? 'smooth' : 'auto' });
+                } catch (e) {
+                    slider.scrollLeft = left;
+                }
+            }
+
+            // Auto-advance one card at a time
+            let autoTimer = null;
+            let isPaused = false;
+            function startAuto() {
+                stopAuto();
+                autoTimer = setInterval(function() {
+                    if (isPaused) return;
+                    goToIndex((currentIndex + 1) % cards.length);
+                }, 3000);
+            }
+            function stopAuto() {
+                if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+            }
+
+            // Pause on hover
+            slider.addEventListener('mouseenter', function() { isPaused = true; stopAuto(); });
+            slider.addEventListener('mouseleave', function() { isPaused = false; startAuto(); });
+
+            // Drag / touch handling with snap on release
+            let isDragging = false;
+            let dragStartX = 0;
+            let dragStartScroll = 0;
+
+            function findClosestIndex(scrollLeft) {
+                let best = 0;
+                let bestDiff = Infinity;
+                positions.forEach((p, i) => {
+                    const d = Math.abs(p - scrollLeft);
+                    if (d < bestDiff) { bestDiff = d; best = i; }
+                });
+                return best;
+            }
+
+            slider.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                isPaused = true;
+                dragStartX = e.clientX;
+                dragStartScroll = slider.scrollLeft;
+                slider.classList.add('dragging');
+                stopAuto();
+                e.preventDefault();
+            });
+
+            window.addEventListener('mousemove', function(e) {
+                if (!isDragging) return;
+                const dx = e.clientX - dragStartX;
+                slider.scrollLeft = Math.max(0, Math.min(slider.scrollWidth - slider.clientWidth, dragStartScroll - dx));
+            });
+
+            window.addEventListener('mouseup', function() {
+                if (!isDragging) return;
+                isDragging = false;
+                slider.classList.remove('dragging');
+                // Snap to nearest card
+                const idx = findClosestIndex(slider.scrollLeft);
+                goToIndex(idx, true);
+                // resume auto after a short delay
+                setTimeout(function() { isPaused = false; startAuto(); }, 700);
+            });
+
+            // Touch handlers
+            slider.addEventListener('touchstart', function(e) {
+                isDragging = true;
+                isPaused = true;
+                dragStartX = e.touches[0].clientX;
+                dragStartScroll = slider.scrollLeft;
+                stopAuto();
+            }, { passive: true });
+
+            slider.addEventListener('touchmove', function(e) {
+                if (!isDragging) return;
+                const dx = e.touches[0].clientX - dragStartX;
+                slider.scrollLeft = Math.max(0, Math.min(slider.scrollWidth - slider.clientWidth, dragStartScroll - dx));
+            }, { passive: true });
+
+            slider.addEventListener('touchend', function() {
+                if (!isDragging) return;
+                isDragging = false;
+                // Snap to nearest card
+                const idx = findClosestIndex(slider.scrollLeft);
+                goToIndex(idx, true);
+                setTimeout(function() { isPaused = false; startAuto(); }, 800);
+            });
+
+            // Initialize
+            buildPositions();
+            goToIndex(0, false);
+            startAuto();
         });
     </script>
 
