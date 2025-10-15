@@ -74,7 +74,7 @@
                         <!-- Center - Navigation Menu -->
                         <div class="nav-menu">
                             <ul class="nav-links">
-                                <li><a href="index.html" class="nav-link active">Home</a></li>
+                                <li><a href="index.html" class="nav-link">Home</a></li>
                                 <li><a href="about.html" class="nav-link">About Us</a></li>
                                 <li><a href="specialties.html" class="nav-link">Specialties</a></li>
                                 <li><a href="services.html" class="nav-link">Services</a></li>
@@ -116,6 +116,78 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
+                                    <script>
+                                        (function () {
+                                            // Show only first N items for the active category
+                                            const VISIBLE_COUNT = 9;
+
+                                            function getActiveCategory() {
+                                                const active = document.querySelector('.menu-tab.active');
+                                                return active ? active.getAttribute('data-category') : 'dosa';
+                                            }
+
+                                            function init() {
+                                                const menuGrid = document.getElementById('menuGrid');
+                                                const tabs = document.querySelectorAll('.menu-tab');
+                                                const seeMoreBtn = document.getElementById('menuSeeMore');
+                                                if (!menuGrid || !tabs) return;
+
+                                                // in-grid See more card removed (we keep bottom button only)
+
+                                                function updateVisibility() {
+                                                    const active = getActiveCategory();
+                                                    const items = Array.from(menuGrid.querySelectorAll('.menu-item'));
+                                                    // filter items by active category
+                                                    const filtered = items.filter(i => i.getAttribute('data-category') === active);
+                                                    // hide all filtered items initially
+                                                    filtered.forEach((el, idx) => {
+                                                        if (idx < VISIBLE_COUNT) el.style.display = '';
+                                                        else el.style.display = 'none';
+                                                    });
+
+                                                    // show/hide see more button
+                                                    if (filtered.length > VISIBLE_COUNT) {
+                                                        if (seeMoreBtn) seeMoreBtn.style.display = 'inline-block';
+                                                    } else {
+                                                        if (seeMoreBtn) seeMoreBtn.style.display = 'none';
+                                                    }
+                                                }
+
+                                                // tab click handlers (also support existing site handlers)
+                                                tabs.forEach(tab => {
+                                                    tab.addEventListener('click', function () {
+                                                        // toggle active class
+                                                        tabs.forEach(t => t.classList.remove('active'));
+                                                        this.classList.add('active');
+                                                        updateVisibility();
+                                                    });
+                                                });
+
+                                                // See more click (button)
+                                                if (seeMoreBtn) {
+                                                    seeMoreBtn.addEventListener('click', function () {
+                                                        const active = getActiveCategory();
+                                                        const items = Array.from(menuGrid.querySelectorAll('.menu-item'))
+                                                            .filter(i => i.getAttribute('data-category') === active);
+                                                        items.forEach(i => i.style.display = '');
+                                                        this.style.display = 'none';
+                                                        seeMoreCard.style.display = 'none';
+                                                    });
+                                                }
+
+                                                // (in-grid card removed)
+
+                                                // initial run
+                                                updateVisibility();
+                                            }
+
+                                            if (document.readyState === 'loading') {
+                                                document.addEventListener('DOMContentLoaded', init);
+                                            } else {
+                                                init();
+                                            }
+                                        })();
+                                    </script>
                                     <li class="cart-list-item">
                                         <img src="images\Mixture\mixture-2.jpg" class="me-2 rounded nav-prod-img" alt="Madras Mixture">
                                         <div class="flex-grow-1">
@@ -492,183 +564,406 @@
                         <!-- Category Tabs -->
                         <div class="menu-tabs">
                             <button class="menu-tab active" data-category="dosa">Dosa</button>
-                            <button class="menu-tab" data-category="idli">Idli</button>
-                            <button class="menu-tab" data-category="chutney">Chutney</button>
-                            <button class="menu-tab" data-category="rice">Rice</button>
-                            <button class="menu-tab" data-category="seval">Seval</button>
-                            <button class="menu-tab" data-category="uttapam">Uttapam</button>
-                            <button class="menu-tab" data-category="vada">Vada</button>
-                            <button class="menu-tab" data-category="beverages">Beverages</button>
-                            <button class="menu-tab" data-category="other">Other</button>
+                            <button class="menu-tab" data-category="other-mains">Other Mains</button>
+                            <button class="menu-tab" data-category="extras">Extras</button>
+                            <button class="menu-tab" data-category="drinks">Drinks</button>
+                            <button class="menu-tab" data-category="coffee">Coffee</button>
                         </div>
 
-                        <!-- Menu Grid -->
+                        <!-- Menu Grid (updated categories and items; prices intentionally omitted) -->
                         <div class="menu-grid" id="menuGrid">
-                            <!-- Dosa Category -->
-                            <div class="menu-item" data-category="dosa">
+                            <!-- Dosa Category (detailed list with short descriptions) -->
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Ghee-Dos.webp" alt="Beetroot Ghee Roast">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Plain Dosa">
                                 </div>
-                                <h3 class="menu-item-title">Beetroot Ghee Roast</h3>
+                                <h3 class="menu-item-title">Plain Dosa <span class="menu-item-meta"></span></h3>
                             </div>
-                            <div class="menu-item" data-category="dosa">
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Ghee-Dos.webp" alt="Dhaniya Dosa">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Paper Dosa">
                                 </div>
-                                <h3 class="menu-item-title">Dhaniya Dosa</h3>
+                                <h3 class="menu-item-title">Paper Dosa <span class="menu-item-meta"></span></h3>
                             </div>
-                            <div class="menu-item" data-category="dosa">
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Ghee-Dos.webp" alt="Dhaniya Ghee Roast">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Onion Dosa">
                                 </div>
-                                <h3 class="menu-item-title">Dhaniya Ghee Roast</h3>
+                                <h3 class="menu-item-title">Onion Dosa</h3>
                             </div>
-                            <div class="menu-item" data-category="dosa">
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Ghee-Dos.webp" alt="Garlic Dosa">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Tomato Onion Uttapam">
                                 </div>
-                                <h3 class="menu-item-title">Garlic Dosa</h3>
+                                <h3 class="menu-item-title">Tomato Onion Uttapam <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Masala Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Masala Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Ghee Masala Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Ghee Masala Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Ghee Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Ghee Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Kara Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Kara Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Mushroom Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Mushroom Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Cheese Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Cheese Dosa </h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Cheese Onion Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Cheese Onion Dosa</h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Cheese Mushroom Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Cheese Mushroom Dosa <span class="menu-item-meta"></span></h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Cheese Masala Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Cheese Masala Dosa </h3>
+                            </div>
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Cheese Onion Masala Dosa">
+                                </div>
+                                <h3 class="menu-item-title">Cheese Onion Masala Dosa </h3>
                             </div>
 
-                            <!-- Idli Category -->
-                            <div class="menu-item" data-category="idli">
+                            <!-- New dessert/fusion dosas -->
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Podi-Idly.webp" alt="Idly">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Choco Banana Dosa">
                                 </div>
-                                <h3 class="menu-item-title">Idly</h3>
+                                <h3 class="menu-item-title">Choco Banana Dosa</h3>
                             </div>
-                            <div class="menu-item" data-category="idli">
+                            <div class="menu-item menu-item-dosa" data-category="dosa">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Podi-Idly.webp" alt="Podi Idly">
+                                    <img src="images/index/Ghee-Dos.webp" alt="Chocolate Strawberry Dosa">
                                 </div>
-                                <h3 class="menu-item-title">Podi Idly</h3>
+                                <h3 class="menu-item-title">Chocolate Strawberry Dosa</h3>
                             </div>
-                            <div class="menu-item" data-category="idli">
+
+                            <!-- Other Mains -->
+                            <div class="menu-item" data-category="other-mains">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/idly-set.jpg" alt="Idly Set">
+                                </div>
+                                <h3 class="menu-item-title">Idly Set (3pcs)</h3>
+                            </div>
+                            <div class="menu-item" data-category="other-mains">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/mini-sambar-idly.jpg" alt="Mini Sambar Idly">
+                                </div>
+                                <h3 class="menu-item-title">Mini Sambar Idly (9pcs)</h3>
+                            </div>
+                            <div class="menu-item" data-category="other-mains">
                                 <div class="menu-item-image">
                                     <img src="images/food-cards/string-hoppers.jpg" alt="String Hoppers">
                                 </div>
-                                <h3 class="menu-item-title">String Hoppers</h3>
+                                <h3 class="menu-item-title">String Hoppers (10pcs)</h3>
                             </div>
-                            <div class="menu-item" data-category="idli">
+                            <div class="menu-item" data-category="other-mains">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/pittu.jpeg" alt="Pittu">
+                                    <img src="images/food-cards/chapati-channa.jpg" alt="Chapathi Set">
                                 </div>
-                                <h3 class="menu-item-title">Pittu</h3>
+                                <h3 class="menu-item-title">Chapathi Set w/ channa (2pcs)</h3>
                             </div>
-
-                            <!-- Rice Category -->
-                            <div class="menu-item" data-category="rice">
+                            <div class="menu-item" data-category="other-mains">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/poori.jpg" alt="Poori Set">
+                                </div>
+                                <h3 class="menu-item-title">Poori Set w/ potato kima (2pcs)</h3>
+                            </div>
+                            <div class="menu-item" data-category="other-mains">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/vegetable-fried-rice.jpg" alt="Vegetable Fried Rice">
+                                </div>
+                                <h3 class="menu-item-title">Vegetable Fried Rice</h3>
+                            </div>
+                            <div class="menu-item" data-category="other-mains">
                                 <div class="menu-item-image">
                                     <img src="images/food-cards/rice-curry.webp" alt="Rice & Curry">
                                 </div>
-                                <h3 class="menu-item-title">Rice & Curry</h3>
+                                <h3 class="menu-item-title">Rice & Curry (11am to 3pm)</h3>
                             </div>
-                            <div class="menu-item" data-category="rice">
+                            <div class="menu-item" data-category="other-mains">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/milk-rice.jpg" alt="Milk Rice">
+                                    <img src="images/food-cards/south-indian-thali.jpg" alt="South Indian Thali">
                                 </div>
-                                <h3 class="menu-item-title">Milk Rice</h3>
-                            </div>
-                            <div class="menu-item" data-category="rice">
-                                <div class="menu-item-image">
-                                    <img src="images/index/Ghee-Pongal.webp" alt="Ghee Pongal">
-                                </div>
-                                <h3 class="menu-item-title">Ghee Pongal</h3>
-                            </div>
-                            <div class="menu-item" data-category="rice">
-                                <div class="menu-item-image">
-                                    <img src="images/food-cards/kottu.jpg" alt="Kottu">
-                                </div>
-                                <h3 class="menu-item-title">Kottu</h3>
+                                <h3 class="menu-item-title">South Indian Thali (11am to 3pm)</h3>
                             </div>
 
-                            <!-- Chutney Category -->
-                            <div class="menu-item" data-category="chutney">
+                            <!-- Extras -->
+                            <div class="menu-item" data-category="extras">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/coco-sambol.jpg" alt="Coconut Sambol">
+                                    <img src="images/index/Ulundu-Vada.webp" alt="Ulundu Vada">
                                 </div>
-                                <h3 class="menu-item-title">Coconut Sambol</h3>
+                                <h3 class="menu-item-title">Ulundu Vada</h3>
+                            </div>
+                            <div class="menu-item" data-category="extras">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Dhal-Vada.webp" alt="Dhal Vada">
+                                </div>
+                                <h3 class="menu-item-title">Dhal Vada</h3>
+                            </div>
+                            <div class="menu-item" data-category="extras">
+                                <div class="menu-item-image">
+                                    <img src="images/index/Mysore-Bonda.webp" alt="Bonda">
+                                </div>
+                                <h3 class="menu-item-title">Bonda</h3>
+                            </div>
+                            <div class="menu-item" data-category="extras">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/laddu.jpg" alt="Laddu">
+                                </div>
+                                <h3 class="menu-item-title">Laddu</h3>
+                            </div>
+                            <div class="menu-item" data-category="extras">
+                                <div class="menu-item-image">
+                                    <img src="images/food-cards/mysorepak.jpg" alt="Mysorepak">
+                                </div>
+                                <h3 class="menu-item-title">Mysorepak</h3>
                             </div>
 
-                            <!-- Seval Category (String Hoppers variants) -->
-                            <div class="menu-item" data-category="seval">
+                            <!-- Drinks -->
+                            <!-- Drinks -->
+                            <!-- Lassi variations -->
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/string-hoppers.jpg" alt="String Hoppers">
+                                    <img src="images/drinks/lassi.jpg" alt="Salt Lassi">
                                 </div>
-                                <h3 class="menu-item-title">String Hoppers</h3>
+                                <h3 class="menu-item-title">Salt Lassi</h3>
+                            </div>
+                            <div class="menu-item" data-category="drinks">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/lassi.jpg" alt="Sweet Lassi">
+                                </div>
+                                <h3 class="menu-item-title">Sweet Lassi</h3>
+                            </div>
+                            <div class="menu-item" data-category="drinks">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/lassi.jpg" alt="Banana Lassi">
+                                </div>
+                                <h3 class="menu-item-title">Banana Lassi</h3>
+                            </div>
+                            <div class="menu-item" data-category="drinks">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/lassi.jpg" alt="Mango Lassi">
+                                </div>
+                                <h3 class="menu-item-title">Mango Lassi</h3>
                             </div>
 
-                            <!-- Uttapam Category -->
-                            <div class="menu-item" data-category="uttapam">
+                            <!-- Fresh juices -->
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/hoppers.jpg" alt="Hoppers">
+                                    <img src="images/drinks/fresh-juice.jpg" alt="Lime Juice">
                                 </div>
-                                <h3 class="menu-item-title">Hoppers</h3>
+                                <h3 class="menu-item-title">Lime Juice</h3>
                             </div>
-                            <div class="menu-item" data-category="uttapam">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/egg-hoppers.jpg" alt="Egg Hoppers">
+                                    <img src="images/drinks/fresh-juice.jpg" alt="Papaya Juice">
                                 </div>
-                                <h3 class="menu-item-title">Egg Hoppers</h3>
+                                <h3 class="menu-item-title">Papaya Juice</h3>
                             </div>
-
-                            <!-- Vada Category -->
-                            <div class="menu-item" data-category="vada">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Medhu-Vada.webp" alt="Medhu Vada">
+                                    <img src="images/drinks/fresh-juice.jpg" alt="Mango Juice">
                                 </div>
-                                <h3 class="menu-item-title">Medhu Vada</h3>
+                                <h3 class="menu-item-title">Mango Juice</h3>
                             </div>
-                            <div class="menu-item" data-category="vada">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Onion-Medhu-Vada.webp" alt="Onion Vada">
+                                    <img src="images/drinks/fresh-juice.jpg" alt="Mix Fruit Juice">
                                 </div>
-                                <h3 class="menu-item-title">Onion Vada</h3>
-                            </div>
-                            <div class="menu-item" data-category="vada">
-                                <div class="menu-item-image">
-                                    <img src="images/index/Masala-Vada.webp" alt="Masala Vada">
-                                </div>
-                                <h3 class="menu-item-title">Masala Vada</h3>
+                                <h3 class="menu-item-title">Mix Fruit Juice</h3>
                             </div>
 
-                            <!-- Other Category -->
-                            <div class="menu-item" data-category="other">
+                            <!-- Shakes -->
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Poori.webp" alt="Poori">
+                                    <img src="images/drinks/shakes.jpg" alt="Vanilla Shake">
                                 </div>
-                                <h3 class="menu-item-title">Poori</h3>
+                                <h3 class="menu-item-title">Vanilla Shake</h3>
                             </div>
-                            <div class="menu-item" data-category="other">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Mysore-Bonda.webp" alt="Mysore Bonda">
+                                    <img src="images/drinks/shakes.jpg" alt="Strawberry Shake">
                                 </div>
-                                <h3 class="menu-item-title">Mysore Bonda</h3>
+                                <h3 class="menu-item-title">Strawberry Shake</h3>
                             </div>
-                            <div class="menu-item" data-category="other">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Pani-Poori.webp" alt="Pani Poori">
+                                    <img src="images/drinks/shakes.jpg" alt="Chocolate Shake">
                                 </div>
-                                <h3 class="menu-item-title">Pani Poori</h3>
+                                <h3 class="menu-item-title">Chocolate Shake</h3>
                             </div>
-                            <div class="menu-item" data-category="other">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/index/Samosa.webp" alt="Samosa">
+                                    <img src="images/drinks/shakes.jpg" alt="Banana Shake">
                                 </div>
-                                <h3 class="menu-item-title">Samosa</h3>
+                                <h3 class="menu-item-title">Banana Shake</h3>
                             </div>
-                            <div class="menu-item" data-category="other">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/coco-roti.jpg" alt="Coconut Roti">
+                                    <img src="images/drinks/shakes.jpg" alt="Pineapple Shake">
                                 </div>
-                                <h3 class="menu-item-title">Coconut Roti</h3>
+                                <h3 class="menu-item-title">Pineapple Shake</h3>
                             </div>
-                            <div class="menu-item" data-category="other">
+                            <div class="menu-item" data-category="drinks">
                                 <div class="menu-item-image">
-                                    <img src="images/food-cards/halapa.jpg" alt="Halapa">
+                                    <img src="images/drinks/shakes.jpg" alt="Faluda">
                                 </div>
-                                <h3 class="menu-item-title">Halapa</h3>
+                                <h3 class="menu-item-title">Faluda</h3>
                             </div>
+
+                            <!-- Coffee -->
+                            <!-- Coffee Classics -->
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Americano">
+                                </div>
+                                <h3 class="menu-item-title">Americano</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Cappuccino">
+                                </div>
+                                <h3 class="menu-item-title">Cappuccino</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Caffe Mocha">
+                                </div>
+                                <h3 class="menu-item-title">Caffe Mocha</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Caffe Latte">
+                                </div>
+                                <h3 class="menu-item-title">Caffe Latte</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Hot Chocolate">
+                                </div>
+                                <h3 class="menu-item-title">Hot Chocolate</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Espresso">
+                                </div>
+                                <h3 class="menu-item-title">Espresso</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Espresso Doppio">
+                                </div>
+                                <h3 class="menu-item-title">Espresso Doppio</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Affogato">
+                                </div>
+                                <h3 class="menu-item-title">Affogato</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Flat White">
+                                </div>
+                                <h3 class="menu-item-title">Flat White</h3>
+                            </div>
+
+                            <!-- Cold Coffee -->
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/iced-coffee.jpg" alt="Iced Caffe Latte">
+                                </div>
+                                <h3 class="menu-item-title">Iced Caffe Latte</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/iced-coffee.jpg" alt="Iced Americano">
+                                </div>
+                                <h3 class="menu-item-title">Iced Americano</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/iced-coffee.jpg" alt="Iced Caffe Mocha">
+                                </div>
+                                <h3 class="menu-item-title">Iced Caffe Mocha</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/iced-coffee.jpg" alt="Iced Caramel Macchiato">
+                                </div>
+                                <h3 class="menu-item-title">Iced Caramel Macchiato</h3>
+                            </div>
+
+                            <!-- Make it your drink (extras) -->
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Espresso - Extra Shot">
+                                </div>
+                                <h3 class="menu-item-title">Espresso — Extra Shot</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Syrup - Vanilla">
+                                </div>
+                                <h3 class="menu-item-title">Add Syrup — Vanilla</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Syrup - Caramel">
+                                </div>
+                                <h3 class="menu-item-title">Add Syrup — Caramel</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Syrup - Hazelnut">
+                                </div>
+                                <h3 class="menu-item-title">Add Syrup — Hazelnut</h3>
+                            </div>
+                            <div class="menu-item" data-category="coffee">
+                                <div class="menu-item-image">
+                                    <img src="images/drinks/coffee-classics.jpg" alt="Syrup - Irish">
+                                </div>
+                                <h3 class="menu-item-title">Add Syrup — Irish</h3>
+                            </div>
+                        </div>
+                        <!-- See more button (appears when a category has more than 9 items) -->
+                        <div class="menu-see-more-wrap text-center" style="margin-top:18px;">
+                            <button id="menuSeeMore" class="btn btn-outline-primary">See More</button>
                         </div>
                     </div>
                 </section>

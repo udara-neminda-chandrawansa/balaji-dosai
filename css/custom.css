@@ -397,6 +397,25 @@
     transform: translateY(0);
 }
 
+/* See more button styling to match menu tabs */
+.menu-see-more-wrap #menuSeeMore {
+    background: #6aa347; /* similar green */
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(106,163,71,0.18);
+}
+.menu-see-more-wrap #menuSeeMore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(106,163,71,0.24);
+}
+
+/* Hide by default; JS will show when needed */
+#menuSeeMore { display: none; }
+
+
 /* small list items in dropdown are handled by specific selectors below */
 
 /* Account table responsive styles (added for account pages) */
