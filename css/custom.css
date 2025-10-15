@@ -313,10 +313,9 @@
 }
 
 .btn-login {
-    background: linear-gradient(135deg, var(--brand-dark) 0%, #014e37 100%);
     color: white;
     padding: 12px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
