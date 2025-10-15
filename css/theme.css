@@ -28,29 +28,31 @@
 /*------------------------------------------------------------------
 [Color codes]
 
-Background: #ffffff
+  color: #ffffff;
 Content: #7a7676
 Header h1 to h6: #383848
-Footer: #20202f
-
 a (standard): #e4b95b -> #1B5E20
-a (hover): #383848
+  color: #ffffff;
+}
+.footer-part a:hover {
+  color: #ffffff;
 a (active): #383848
 a (focus): #383848
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
+  color: #ffffff;
 [Typography]
 
-Body copy: 16px/26px Source Sans Pro, Cinzel, QuicksandBook, jey;
-Headers: 15px/42px Source Sans Pro, Cinzel, QuicksandBook, jey;
-Input, textarea: 14px 14px/42px Source Sans Pro, Cinzel, QuicksandBook, jey;
+  float: left;
+  width: 100%;
+  color: #ffffff;
 Sidebar heading: 18px 14px/42px Source Sans Pro, Cinzel, QuicksandBook, jey;
 -------------------------------------------------------------------*/
-
+ /* color: #ffffff; */
 /* cyrillic */
-
-@font-face {
+/* 
+  color: #ffffff;
   font-family: "Exo 2";
   font-style: normal;
   font-weight: 400;
@@ -58,13 +60,13 @@ Sidebar heading: 18px 14px/42px Source Sans Pro, Cinzel, QuicksandBook, jey;
     url(https://fonts.gstatic.com/s/exo2/v4/pEbpp8gu02JrI5SDG9jj6g.woff2)
       format("woff2");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
+} */
 
 /* latin-ext */
 
 @font-face {
   font-family: "Exo 2";
-  font-style: normal;
+  color: #ffffff;
   font-weight: 400;
   src: local("Exo 2"), local("Exo2-Regular"),
     url(https://fonts.gstatic.com/s/exo2/v4/sZoRRDfBcJL9e6dHdMU_Tg.woff2)
@@ -3554,11 +3556,11 @@ textarea {
   margin-top: 0px;
   float: left;
   width: 100%;
-  background: #000;
+  background: #006241;
   position: relative;
   padding: 50px 0 40px 0;
   color: #f6f0f2;
-  border-bottom: 8px solid var(--my-basic-color);
+  border-bottom: 8px solid #ffffff;
   font-family: "Cinzel";
   font-size: 15px;
 }
@@ -3569,7 +3571,7 @@ textarea {
 .footer-part h4,
 .footer-part h5,
 .footer-part h6 {
-  color: var(--my-basic-color);
+  color: #ffffff;
 }
 
 .footer-inner {
@@ -3579,11 +3581,11 @@ textarea {
 }
 
 .footer-part a {
-  color: #f6f0f2;
+  color: #ffffff;
 }
 
 .footer-part a:hover {
-  color: #f6f0f2;
+  color: #ffffff;
 }
 
 .footer-info {
@@ -3594,6 +3596,7 @@ textarea {
 
 .footer-info p {
   margin: 0px;
+  color: #ffffff;
 }
 
 .footer-info h3 {
@@ -3603,15 +3606,15 @@ textarea {
 .copy-right {
   float: left;
   width: 100%;
-  color: #5c5c6e;
+  color: #ffffff;
 }
 
 .copy-right a {
-  color: #5c5c6e;
+  color: #ffffff;
 }
 
 .copy-right a:hover {
-  color: #bdbdd3;
+  color: #ffffff;
 }
 
 .social-round {
@@ -3642,10 +3645,10 @@ textarea {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   border-radius: 100%;
-  border: 2px solid #383848;
+  border: 2px solid rgba(255,255,255,0.12);
   line-height: 50px;
   font-size: 16px;
-  color: #5c5c6e;
+  color: #ffffff;
 }
 
 .copyright-before {
