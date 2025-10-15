@@ -1389,6 +1389,10 @@ input[type="number"] {
   background: url("../images/pattern-black.png") no-repeat center center;
 }
 
+.icon-darkgreen {
+  background: url("../images/pattern-darkgreen.png") no-repeat center center;
+}
+
 .banner-bg {
   background-size: cover;
   background-position: center center;
